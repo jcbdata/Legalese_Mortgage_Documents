@@ -1,4 +1,4 @@
-,target,model,metric,model_input,split_data,model_result,best_params,count,test_data_count,best_crossval_score,train_score,test_score
+,target,model,metric,model_input,split_data,model_result,best_params,count_deduplicated,test_data_count,best_crossval_score,train_score,test_score
 0,nontrigger,lr,accuracy,SentenceLemmas,"{'X_train': 368     the mortgage loan be structure with a hard loc...
 342     during a debt yield trigger period , so long a...
 1692    the borrower be require to complete all requir...
@@ -67,19 +67,19 @@ Name: nontrigger, Length: 580, dtype: int64, 'indices_train': Int64Index([ 368, 
                                                         stop_words=None,
                                                         strip_accents=None,
                                                         token_pattern='(?u)...
-                                               'be', 'for', 'with', 'that',
                                                'marriott'],
-                                              ['our', 'she', 'their', 'within',
-                                               'however', 'anywhere', 'further',
-                                               'may', 'also', 'up', 'besides',
-                                               'every', 'last', 'name',
-                                               'should', 'for', 'around',
-                                               'part', 'thence', 'almost',
-                                               'full', 'to', 'were', 'himself',
-                                               'would', 'how', 'your',
-                                               'everyone', 'during', 'have', ...]]},
+                                              ['became', 'full', 'unless',
+                                               'with', 'last', 'hers', 'is',
+                                               'hereafter', 'she', 'still',
+                                               'besides', 'during', 'give',
+                                               'all', 'whose', 'latter',
+                                               'itself', 'am', 'beyond',
+                                               'please', 'seemed', 'mostly',
+                                               'here', 'sometime', 'those',
+                                               'already', 'just', 'this',
+                                               'side', 'before', ...]]},
              pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
-             scoring='accuracy', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 1000, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 3), 'cvec__stop_words': ['our', 'she', 'their', 'within', 'however', 'anywhere', 'further', 'may', 'also', 'up', 'besides', 'every', 'last', 'name', 'should', 'for', 'around', 'part', 'thence', 'almost', 'full', 'to', 'were', 'himself', 'would', 'how', 'your', 'everyone', 'during', 'have', 'about', 'itself', 'even', 'amongst', 'me', 'becomes', 'i', 'rather', 'onto', 'really', 'then', 'these', 'until', 'as', 'something', 'becoming', 'call', 'nothing', 'there', 'behind', 'too', 'say', 'with', 'yours', 'has', 'none', 'someone', 'together', 'whole', 'twenty', 'ca', 'empty', 'else', 'go', 'seemed', 'unless', 'not', 'now', 'although', 'latterly', 'except', 'doing', 'might', 'who', 'whereby', 'off', 'fifty', 'some', 'therein', 'four', 'here', 'no', 'first', 'will', 'by', 'former', 'whenever', 'so', 'top', 'ten', 'her', 'front', 'between', 'am', 'or', 'quite', 'more', 'the', 'him', 'sometimes', 'a', 'hereafter', 'from', 'made', 'three', 'only', 'cannot', 'same', 'noone', 'was', 'yourselves', 'indeed', 'those', 'beforehand', 'though', 'since', 'just', 'nine', 'yet', 'my', 'it', 'amount', 'that', 'hereupon', 'towards', 'already', 'back', 'somewhere', 'upon', 'where', 'third', 'several', 'be', 'does', 'than', 'while', 'yourself', 'into', 'become', 'this', 'what', 'somehow', 'whereas', 'five', 'once', 'neither', 'bottom', 'see', 'been', 'whether', 'above', 'twelve', 'which', 'under', 'because', 'wherever', 'thus', 'along', 'below', 'hence', 'least', 'next', 'his', 'namely', 'one', 'sometime', 'throughout', 'via', 'enough', 'still', 'whose', 'formerly', 'nevertheless', 'after', 'various', 'mostly', 'keep', 'of', 'whence', 'anyway', 'others', 'perhaps', 'whereupon', 'why', 'well', 'put', 'very', 'show', 'other', 'whoever', 'mine', 'hers', 'he', 'in', 'make', 'again', 'is', 'on', 're', 'whereafter', 'move', 'nowhere', 'thereupon', 'whatever', 'always', 'across', 'if', 'please', 'whither', 'its', 'thereby', 'through', 'beyond', 'before', 'sixty', 'whom', 'afterwards', 'hereby', 'either', 'anyone', 'moreover', 'give', 'you', 'are', 'forty', 'but', 'everywhere', 'beside', 'at', 'wherein', 'each', 'such', 'regarding', 'take', 'done', 'against', 'toward', 'ourselves', 'do', 'elsewhere', 'never', 'when', 'nobody', 'they', 'among', 'due', 'therefore', 'another', 'thereafter', 'myself', 'herself', 'nor', 'an', 'seem', 'two', 'became', 'get', 'out', 'meanwhile', 'most', 'serious', 'used', 'ours', 'us', 'over', 'anything', 'down', 'fifteen', 'any', 'hundred', 'could', 'few', 'side', 'herein', 'we', 'them', 'seems', 'both', 'ever', 'had', 'themselves', 'many', 'all', 'eleven', 'can', 'otherwise', 'per', 'much', 'thru', 'using', 'eight', 'and', 'often', 'alone', 'everything', 'seeming', 'anyhow', 'did', 'latter', 'being', 'must', 'own', 'without', 'less', 'six', 'marriott']}",1030,309,0.9726533628972653,0.9940872135994088,0.9672413793103448
+             scoring='accuracy', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 1000, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 3), 'cvec__stop_words': ['became', 'full', 'unless', 'with', 'last', 'hers', 'is', 'hereafter', 'she', 'still', 'besides', 'during', 'give', 'all', 'whose', 'latter', 'itself', 'am', 'beyond', 'please', 'seemed', 'mostly', 'here', 'sometime', 'those', 'already', 'just', 'this', 'side', 'before', 'everything', 'afterwards', 'via', 'of', 'each', 'any', 'nevertheless', 'onto', 'about', 'someone', 'between', 'might', 'thus', 'otherwise', 'after', 'within', 'toward', 'amongst', 'for', 'once', 'amount', 'put', 'wherever', 'enough', 'his', 'their', 'forty', 'by', 'fifty', 'or', 'five', 'more', 're', 'both', 'done', 'thereby', 'and', 'whether', 'never', 'latterly', 'keep', 'again', 'then', 'myself', 'very', 'nothing', 'be', 'yours', 'at', 'whereas', 'because', 'has', 'everywhere', 'indeed', 'others', 'first', 'most', 'fifteen', 'from', 'everyone', 'being', 'along', 'mine', 'twelve', 'we', 'else', 'formerly', 'also', 'under', 'he', 'whence', 'can', 'whereafter', 'hence', 'quite', 'why', 'namely', 'than', 'whom', 'me', 'to', 'whoever', 'part', 'around', 'noone', 'without', 'except', 'her', 'in', 'somewhere', 'thereafter', 'elsewhere', 'if', 'what', 'whenever', 'anyway', 'empty', 'eight', 'many', 'almost', 'us', 'move', 'who', 'a', 'there', 'less', 'they', 'whatever', 'your', 'how', 'make', 'may', 'over', 'hereupon', 'neither', 'ours', 'due', 'various', 'themselves', 'herein', 'top', 'yet', 'anything', 'so', 'yourselves', 'nine', 'hereby', 'while', 'however', 'either', 'such', 'hundred', 'ca', 'anyhow', 'our', 'three', 'beside', 'thru', 'together', 'whole', 'could', 'though', 'further', 'call', 'are', 'should', 'beforehand', 'get', 'its', 'behind', 'twenty', 'used', 'towards', 'you', 'see', 'himself', 'when', 'among', 'nowhere', 'becoming', 'using', 'although', 'an', 'herself', 'nor', 'perhaps', 'him', 'one', 'as', 'now', 'seems', 'every', 'too', 'somehow', 'former', 'whereby', 'would', 'least', 'alone', 'same', 'nobody', 'even', 'until', 'show', 'six', 'off', 'front', 'becomes', 'something', 'per', 'take', 'through', 'were', 'whereupon', 'anywhere', 'does', 'yourself', 'into', 'throughout', 'meanwhile', 'say', 'do', 'on', 'own', 'seeming', 'against', 'become', 'none', 'well', 'made', 'must', 'sometimes', 'therefore', 'my', 'rather', 'only', 'across', 'down', 'thereupon', 'that', 'four', 'where', 'ourselves', 'really', 'did', 'the', 'other', 'will', 'much', 'out', 'regarding', 'them', 'thence', 'but', 'back', 'since', 'up', 'seem', 'serious', 'ten', 'therein', 'always', 'which', 'whither', 'above', 'anyone', 'below', 'bottom', 'doing', 'often', 'eleven', 'have', 'name', 'been', 'few', 'not', 'several', 'no', 'i', 'next', 'two', 'cannot', 'sixty', 'upon', 'wherein', 'another', 'moreover', 'some', 'these', 'was', 'third', 'go', 'ever', 'it', 'had', 'marriott']}",1030,309,0.9726533628972653,0.9940872135994088,0.9672413793103448
 1,loan_default,lr,accuracy,SentenceLemmas,"{'X_train': 338     “ cash trap period ” will mean the period comm...
 1621    the required renovation work , replacement and...
 1033    the pool a mortgage loan , the pool b mortgage...
@@ -148,19 +148,19 @@ Name: loan_default, Length: 580, dtype: int64, 'indices_train': Int64Index([ 338
                                                         stop_words=None,
                                                         strip_accents=None,
                                                         token_pattern='(?u)...
-                                               'be', 'for', 'with', 'that',
                                                'marriott'],
-                                              ['our', 'she', 'their', 'within',
-                                               'however', 'anywhere', 'further',
-                                               'may', 'also', 'up', 'besides',
-                                               'every', 'last', 'name',
-                                               'should', 'for', 'around',
-                                               'part', 'thence', 'almost',
-                                               'full', 'to', 'were', 'himself',
-                                               'would', 'how', 'your',
-                                               'everyone', 'during', 'have', ...]]},
+                                              ['became', 'full', 'unless',
+                                               'with', 'last', 'hers', 'is',
+                                               'hereafter', 'she', 'still',
+                                               'besides', 'during', 'give',
+                                               'all', 'whose', 'latter',
+                                               'itself', 'am', 'beyond',
+                                               'please', 'seemed', 'mostly',
+                                               'here', 'sometime', 'those',
+                                               'already', 'just', 'this',
+                                               'side', 'before', ...]]},
              pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
-             scoring='accuracy', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 400, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 4), 'cvec__stop_words': ['our', 'she', 'their', 'within', 'however', 'anywhere', 'further', 'may', 'also', 'up', 'besides', 'every', 'last', 'name', 'should', 'for', 'around', 'part', 'thence', 'almost', 'full', 'to', 'were', 'himself', 'would', 'how', 'your', 'everyone', 'during', 'have', 'about', 'itself', 'even', 'amongst', 'me', 'becomes', 'i', 'rather', 'onto', 'really', 'then', 'these', 'until', 'as', 'something', 'becoming', 'call', 'nothing', 'there', 'behind', 'too', 'say', 'with', 'yours', 'has', 'none', 'someone', 'together', 'whole', 'twenty', 'ca', 'empty', 'else', 'go', 'seemed', 'unless', 'not', 'now', 'although', 'latterly', 'except', 'doing', 'might', 'who', 'whereby', 'off', 'fifty', 'some', 'therein', 'four', 'here', 'no', 'first', 'will', 'by', 'former', 'whenever', 'so', 'top', 'ten', 'her', 'front', 'between', 'am', 'or', 'quite', 'more', 'the', 'him', 'sometimes', 'a', 'hereafter', 'from', 'made', 'three', 'only', 'cannot', 'same', 'noone', 'was', 'yourselves', 'indeed', 'those', 'beforehand', 'though', 'since', 'just', 'nine', 'yet', 'my', 'it', 'amount', 'that', 'hereupon', 'towards', 'already', 'back', 'somewhere', 'upon', 'where', 'third', 'several', 'be', 'does', 'than', 'while', 'yourself', 'into', 'become', 'this', 'what', 'somehow', 'whereas', 'five', 'once', 'neither', 'bottom', 'see', 'been', 'whether', 'above', 'twelve', 'which', 'under', 'because', 'wherever', 'thus', 'along', 'below', 'hence', 'least', 'next', 'his', 'namely', 'one', 'sometime', 'throughout', 'via', 'enough', 'still', 'whose', 'formerly', 'nevertheless', 'after', 'various', 'mostly', 'keep', 'of', 'whence', 'anyway', 'others', 'perhaps', 'whereupon', 'why', 'well', 'put', 'very', 'show', 'other', 'whoever', 'mine', 'hers', 'he', 'in', 'make', 'again', 'is', 'on', 're', 'whereafter', 'move', 'nowhere', 'thereupon', 'whatever', 'always', 'across', 'if', 'please', 'whither', 'its', 'thereby', 'through', 'beyond', 'before', 'sixty', 'whom', 'afterwards', 'hereby', 'either', 'anyone', 'moreover', 'give', 'you', 'are', 'forty', 'but', 'everywhere', 'beside', 'at', 'wherein', 'each', 'such', 'regarding', 'take', 'done', 'against', 'toward', 'ourselves', 'do', 'elsewhere', 'never', 'when', 'nobody', 'they', 'among', 'due', 'therefore', 'another', 'thereafter', 'myself', 'herself', 'nor', 'an', 'seem', 'two', 'became', 'get', 'out', 'meanwhile', 'most', 'serious', 'used', 'ours', 'us', 'over', 'anything', 'down', 'fifteen', 'any', 'hundred', 'could', 'few', 'side', 'herein', 'we', 'them', 'seems', 'both', 'ever', 'had', 'themselves', 'many', 'all', 'eleven', 'can', 'otherwise', 'per', 'much', 'thru', 'using', 'eight', 'and', 'often', 'alone', 'everything', 'seeming', 'anyhow', 'did', 'latter', 'being', 'must', 'own', 'without', 'less', 'six', 'marriott']}",400,120,0.9748706577974872,0.9933481152993349,0.9793103448275862
+             scoring='accuracy', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 400, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 4), 'cvec__stop_words': ['became', 'full', 'unless', 'with', 'last', 'hers', 'is', 'hereafter', 'she', 'still', 'besides', 'during', 'give', 'all', 'whose', 'latter', 'itself', 'am', 'beyond', 'please', 'seemed', 'mostly', 'here', 'sometime', 'those', 'already', 'just', 'this', 'side', 'before', 'everything', 'afterwards', 'via', 'of', 'each', 'any', 'nevertheless', 'onto', 'about', 'someone', 'between', 'might', 'thus', 'otherwise', 'after', 'within', 'toward', 'amongst', 'for', 'once', 'amount', 'put', 'wherever', 'enough', 'his', 'their', 'forty', 'by', 'fifty', 'or', 'five', 'more', 're', 'both', 'done', 'thereby', 'and', 'whether', 'never', 'latterly', 'keep', 'again', 'then', 'myself', 'very', 'nothing', 'be', 'yours', 'at', 'whereas', 'because', 'has', 'everywhere', 'indeed', 'others', 'first', 'most', 'fifteen', 'from', 'everyone', 'being', 'along', 'mine', 'twelve', 'we', 'else', 'formerly', 'also', 'under', 'he', 'whence', 'can', 'whereafter', 'hence', 'quite', 'why', 'namely', 'than', 'whom', 'me', 'to', 'whoever', 'part', 'around', 'noone', 'without', 'except', 'her', 'in', 'somewhere', 'thereafter', 'elsewhere', 'if', 'what', 'whenever', 'anyway', 'empty', 'eight', 'many', 'almost', 'us', 'move', 'who', 'a', 'there', 'less', 'they', 'whatever', 'your', 'how', 'make', 'may', 'over', 'hereupon', 'neither', 'ours', 'due', 'various', 'themselves', 'herein', 'top', 'yet', 'anything', 'so', 'yourselves', 'nine', 'hereby', 'while', 'however', 'either', 'such', 'hundred', 'ca', 'anyhow', 'our', 'three', 'beside', 'thru', 'together', 'whole', 'could', 'though', 'further', 'call', 'are', 'should', 'beforehand', 'get', 'its', 'behind', 'twenty', 'used', 'towards', 'you', 'see', 'himself', 'when', 'among', 'nowhere', 'becoming', 'using', 'although', 'an', 'herself', 'nor', 'perhaps', 'him', 'one', 'as', 'now', 'seems', 'every', 'too', 'somehow', 'former', 'whereby', 'would', 'least', 'alone', 'same', 'nobody', 'even', 'until', 'show', 'six', 'off', 'front', 'becomes', 'something', 'per', 'take', 'through', 'were', 'whereupon', 'anywhere', 'does', 'yourself', 'into', 'throughout', 'meanwhile', 'say', 'do', 'on', 'own', 'seeming', 'against', 'become', 'none', 'well', 'made', 'must', 'sometimes', 'therefore', 'my', 'rather', 'only', 'across', 'down', 'thereupon', 'that', 'four', 'where', 'ourselves', 'really', 'did', 'the', 'other', 'will', 'much', 'out', 'regarding', 'them', 'thence', 'but', 'back', 'since', 'up', 'seem', 'serious', 'ten', 'therein', 'always', 'which', 'whither', 'above', 'anyone', 'below', 'bottom', 'doing', 'often', 'eleven', 'have', 'name', 'been', 'few', 'not', 'several', 'no', 'i', 'next', 'two', 'cannot', 'sixty', 'upon', 'wherein', 'another', 'moreover', 'some', 'these', 'was', 'third', 'go', 'ever', 'it', 'had', 'marriott']}",400,120,0.9748706577974872,0.9933481152993349,0.9793103448275862
 2,unspecified,lr,accuracy,SentenceLemmas,"{'X_train': 843     upon repayment of the mortgage loan in full , ...
 1109    the borrower have establish and be require to ...
 1307    the cash management account and the lockbox ac...
@@ -229,20 +229,20 @@ Name: unspecified, Length: 580, dtype: int64, 'indices_train': Int64Index([ 843,
                                                         stop_words=None,
                                                         strip_accents=None,
                                                         token_pattern='(?u)...
-                                               'be', 'for', 'with', 'that',
                                                'marriott'],
-                                              ['our', 'she', 'their', 'within',
-                                               'however', 'anywhere', 'further',
-                                               'may', 'also', 'up', 'besides',
-                                               'every', 'last', 'name',
-                                               'should', 'for', 'around',
-                                               'part', 'thence', 'almost',
-                                               'full', 'to', 'were', 'himself',
-                                               'would', 'how', 'your',
-                                               'everyone', 'during', 'have', ...]]},
+                                              ['became', 'full', 'unless',
+                                               'with', 'last', 'hers', 'is',
+                                               'hereafter', 'she', 'still',
+                                               'besides', 'during', 'give',
+                                               'all', 'whose', 'latter',
+                                               'itself', 'am', 'beyond',
+                                               'please', 'seemed', 'mostly',
+                                               'here', 'sometime', 'those',
+                                               'already', 'just', 'this',
+                                               'side', 'before', ...]]},
              pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
              scoring='accuracy', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 1000, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 3), 'cvec__stop_words': ['the', 'to', 'of', 'be', 'and', 'in', 'a', 'marriott']}",346,104,0.9571322985957132,0.9970436067997044,0.9551724137931035
-3,debt_yield_fall,lr,f1,SentenceLemmas,"{'X_train': 215     during the continuance of a mortgage loan even...
+3,debt_yield_fall,lr,accuracy,SentenceLemmas,"{'X_train': 215     during the continuance of a mortgage loan even...
 1370    if the amount of the condo assessments fund wi...
 618     provide no mortgage loan event of default have...
 831     the lender be require to maintain an account f...
@@ -310,20 +310,20 @@ Name: debt_yield_fall, Length: 580, dtype: int64, 'indices_train': Int64Index([ 
                                                         stop_words=None,
                                                         strip_accents=None,
                                                         token_pattern='(?u)...
-                                               'be', 'for', 'with', 'that',
                                                'marriott'],
-                                              ['our', 'she', 'their', 'within',
-                                               'however', 'anywhere', 'further',
-                                               'may', 'also', 'up', 'besides',
-                                               'every', 'last', 'name',
-                                               'should', 'for', 'around',
-                                               'part', 'thence', 'almost',
-                                               'full', 'to', 'were', 'himself',
-                                               'would', 'how', 'your',
-                                               'everyone', 'during', 'have', ...]]},
+                                              ['became', 'full', 'unless',
+                                               'with', 'last', 'hers', 'is',
+                                               'hereafter', 'she', 'still',
+                                               'besides', 'during', 'give',
+                                               'all', 'whose', 'latter',
+                                               'itself', 'am', 'beyond',
+                                               'please', 'seemed', 'mostly',
+                                               'here', 'sometime', 'those',
+                                               'already', 'just', 'this',
+                                               'side', 'before', ...]]},
              pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
-             scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 1000, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 2), 'cvec__stop_words': None}",147,44,0.9452757288373727,1.0,0.9545454545454546
-4,mezzanine_default,lr,f1,SentenceLemmas,"{'X_train': 1866    if the borrower deposit cash collateral with t...
+             scoring='accuracy', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 1000, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 2), 'cvec__stop_words': None}",147,44,0.991869918699187,1.0,0.993103448275862
+4,mezzanine_default,lr,accuracy,SentenceLemmas,"{'X_train': 1866    if the borrower deposit cash collateral with t...
 949     in connection with the origination of the mort...
 861     for so long as a marriott management period or...
 901     the whole loan be structure with a hard lockbo...
@@ -391,20 +391,101 @@ Name: mezzanine_default, Length: 580, dtype: int64, 'indices_train': Int64Index(
                                                         stop_words=None,
                                                         strip_accents=None,
                                                         token_pattern='(?u)...
-                                               'be', 'for', 'with', 'that',
                                                'marriott'],
-                                              ['our', 'she', 'their', 'within',
-                                               'however', 'anywhere', 'further',
-                                               'may', 'also', 'up', 'besides',
-                                               'every', 'last', 'name',
-                                               'should', 'for', 'around',
-                                               'part', 'thence', 'almost',
-                                               'full', 'to', 'were', 'himself',
-                                               'would', 'how', 'your',
-                                               'everyone', 'during', 'have', ...]]},
+                                              ['became', 'full', 'unless',
+                                               'with', 'last', 'hers', 'is',
+                                               'hereafter', 'she', 'still',
+                                               'besides', 'during', 'give',
+                                               'all', 'whose', 'latter',
+                                               'itself', 'am', 'beyond',
+                                               'please', 'seemed', 'mostly',
+                                               'here', 'sometime', 'those',
+                                               'already', 'just', 'this',
+                                               'side', 'before', ...]]},
              pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
-             scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 1000, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 3), 'cvec__stop_words': ['our', 'she', 'their', 'within', 'however', 'anywhere', 'further', 'may', 'also', 'up', 'besides', 'every', 'last', 'name', 'should', 'for', 'around', 'part', 'thence', 'almost', 'full', 'to', 'were', 'himself', 'would', 'how', 'your', 'everyone', 'during', 'have', 'about', 'itself', 'even', 'amongst', 'me', 'becomes', 'i', 'rather', 'onto', 'really', 'then', 'these', 'until', 'as', 'something', 'becoming', 'call', 'nothing', 'there', 'behind', 'too', 'say', 'with', 'yours', 'has', 'none', 'someone', 'together', 'whole', 'twenty', 'ca', 'empty', 'else', 'go', 'seemed', 'unless', 'not', 'now', 'although', 'latterly', 'except', 'doing', 'might', 'who', 'whereby', 'off', 'fifty', 'some', 'therein', 'four', 'here', 'no', 'first', 'will', 'by', 'former', 'whenever', 'so', 'top', 'ten', 'her', 'front', 'between', 'am', 'or', 'quite', 'more', 'the', 'him', 'sometimes', 'a', 'hereafter', 'from', 'made', 'three', 'only', 'cannot', 'same', 'noone', 'was', 'yourselves', 'indeed', 'those', 'beforehand', 'though', 'since', 'just', 'nine', 'yet', 'my', 'it', 'amount', 'that', 'hereupon', 'towards', 'already', 'back', 'somewhere', 'upon', 'where', 'third', 'several', 'be', 'does', 'than', 'while', 'yourself', 'into', 'become', 'this', 'what', 'somehow', 'whereas', 'five', 'once', 'neither', 'bottom', 'see', 'been', 'whether', 'above', 'twelve', 'which', 'under', 'because', 'wherever', 'thus', 'along', 'below', 'hence', 'least', 'next', 'his', 'namely', 'one', 'sometime', 'throughout', 'via', 'enough', 'still', 'whose', 'formerly', 'nevertheless', 'after', 'various', 'mostly', 'keep', 'of', 'whence', 'anyway', 'others', 'perhaps', 'whereupon', 'why', 'well', 'put', 'very', 'show', 'other', 'whoever', 'mine', 'hers', 'he', 'in', 'make', 'again', 'is', 'on', 're', 'whereafter', 'move', 'nowhere', 'thereupon', 'whatever', 'always', 'across', 'if', 'please', 'whither', 'its', 'thereby', 'through', 'beyond', 'before', 'sixty', 'whom', 'afterwards', 'hereby', 'either', 'anyone', 'moreover', 'give', 'you', 'are', 'forty', 'but', 'everywhere', 'beside', 'at', 'wherein', 'each', 'such', 'regarding', 'take', 'done', 'against', 'toward', 'ourselves', 'do', 'elsewhere', 'never', 'when', 'nobody', 'they', 'among', 'due', 'therefore', 'another', 'thereafter', 'myself', 'herself', 'nor', 'an', 'seem', 'two', 'became', 'get', 'out', 'meanwhile', 'most', 'serious', 'used', 'ours', 'us', 'over', 'anything', 'down', 'fifteen', 'any', 'hundred', 'could', 'few', 'side', 'herein', 'we', 'them', 'seems', 'both', 'ever', 'had', 'themselves', 'many', 'all', 'eleven', 'can', 'otherwise', 'per', 'much', 'thru', 'using', 'eight', 'and', 'often', 'alone', 'everything', 'seeming', 'anyhow', 'did', 'latter', 'being', 'must', 'own', 'without', 'less', 'six', 'marriott']}",61,18,0.8961980548187446,1.0,0.8888888888888888
-5,tenant_failure,lr,f1,SentenceLemmas,"{'X_train': 1469      see “ loan term ” herein for more information .
+             scoring='accuracy', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 1000, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 3), 'cvec__stop_words': ['became', 'full', 'unless', 'with', 'last', 'hers', 'is', 'hereafter', 'she', 'still', 'besides', 'during', 'give', 'all', 'whose', 'latter', 'itself', 'am', 'beyond', 'please', 'seemed', 'mostly', 'here', 'sometime', 'those', 'already', 'just', 'this', 'side', 'before', 'everything', 'afterwards', 'via', 'of', 'each', 'any', 'nevertheless', 'onto', 'about', 'someone', 'between', 'might', 'thus', 'otherwise', 'after', 'within', 'toward', 'amongst', 'for', 'once', 'amount', 'put', 'wherever', 'enough', 'his', 'their', 'forty', 'by', 'fifty', 'or', 'five', 'more', 're', 'both', 'done', 'thereby', 'and', 'whether', 'never', 'latterly', 'keep', 'again', 'then', 'myself', 'very', 'nothing', 'be', 'yours', 'at', 'whereas', 'because', 'has', 'everywhere', 'indeed', 'others', 'first', 'most', 'fifteen', 'from', 'everyone', 'being', 'along', 'mine', 'twelve', 'we', 'else', 'formerly', 'also', 'under', 'he', 'whence', 'can', 'whereafter', 'hence', 'quite', 'why', 'namely', 'than', 'whom', 'me', 'to', 'whoever', 'part', 'around', 'noone', 'without', 'except', 'her', 'in', 'somewhere', 'thereafter', 'elsewhere', 'if', 'what', 'whenever', 'anyway', 'empty', 'eight', 'many', 'almost', 'us', 'move', 'who', 'a', 'there', 'less', 'they', 'whatever', 'your', 'how', 'make', 'may', 'over', 'hereupon', 'neither', 'ours', 'due', 'various', 'themselves', 'herein', 'top', 'yet', 'anything', 'so', 'yourselves', 'nine', 'hereby', 'while', 'however', 'either', 'such', 'hundred', 'ca', 'anyhow', 'our', 'three', 'beside', 'thru', 'together', 'whole', 'could', 'though', 'further', 'call', 'are', 'should', 'beforehand', 'get', 'its', 'behind', 'twenty', 'used', 'towards', 'you', 'see', 'himself', 'when', 'among', 'nowhere', 'becoming', 'using', 'although', 'an', 'herself', 'nor', 'perhaps', 'him', 'one', 'as', 'now', 'seems', 'every', 'too', 'somehow', 'former', 'whereby', 'would', 'least', 'alone', 'same', 'nobody', 'even', 'until', 'show', 'six', 'off', 'front', 'becomes', 'something', 'per', 'take', 'through', 'were', 'whereupon', 'anywhere', 'does', 'yourself', 'into', 'throughout', 'meanwhile', 'say', 'do', 'on', 'own', 'seeming', 'against', 'become', 'none', 'well', 'made', 'must', 'sometimes', 'therefore', 'my', 'rather', 'only', 'across', 'down', 'thereupon', 'that', 'four', 'where', 'ourselves', 'really', 'did', 'the', 'other', 'will', 'much', 'out', 'regarding', 'them', 'thence', 'but', 'back', 'since', 'up', 'seem', 'serious', 'ten', 'therein', 'always', 'which', 'whither', 'above', 'anyone', 'below', 'bottom', 'doing', 'often', 'eleven', 'have', 'name', 'been', 'few', 'not', 'several', 'no', 'i', 'next', 'two', 'cannot', 'sixty', 'upon', 'wherein', 'another', 'moreover', 'some', 'these', 'was', 'third', 'go', 'ever', 'it', 'had', 'marriott']}",61,18,0.9940872135994088,1.0,0.993103448275862
+5,bankruptcy,lr,accuracy,SentenceLemmas,"{'X_train': 1541    “ approve leasing costs ” mean actual out - of...
+608     follow the termination of the trigger period (...
+25      “ cash management period ” ” mean ( i ) from a...
+666     during a cash sweep period trigger solely by (...
+854     “ hotel operator ” mean the ritz - carlton hot...
+                              ...                        
+1151    the mortgage lender be require to release fund...
+1791    on each mortgage loan payment date during the ...
+74      during the continuance of a cash trap period ,...
+1447    “ capital expenditures ” mean amount expend fo...
+533     the borrower be require to pay ( or because to...
+Name: SentenceLemmas, Length: 1353, dtype: object, 'X_test': 753     “ eligible institution ” mean with regard to t...
+1112    see “ description of the mortgage loan — loss ...
+427     additionally , if , at any time during a trigg...
+1640    the loan document require a furniture , fixtur...
+1493    amount so deposit be refer to as the “ immedia...
+                              ...                        
+1146    “ rollover reserve monthly deposit ” mean , fo...
+87      during the period in which neither cash trap p...
+1869    if a trigger period be continue , all availabl...
+1504    “ replacement ” for any period mean replacemen...
+1362    the borrower agree to notify mortgage lender p...
+Name: SentenceLemmas, Length: 580, dtype: object, 'y_train': 1541    0
+608     0
+25      0
+666     1
+854     0
+       ..
+1151    0
+1791    0
+74      0
+1447    0
+533     0
+Name: bankruptcy, Length: 1353, dtype: int64, 'y_test': 753     0
+1112    0
+427     0
+1640    0
+1493    0
+       ..
+1146    0
+87      0
+1869    0
+1504    0
+1362    0
+Name: bankruptcy, Length: 580, dtype: int64, 'indices_train': Int64Index([1541,  608,   25,  666,  854, 1263,  508,   52,  130, 1568,
+            ...
+            1113, 1389, 1895,  924, 1062, 1151, 1791,   74, 1447,  533],
+           dtype='int64', length=1353), 'indices_test': Int64Index([ 753, 1112,  427, 1640, 1493, 1579, 1299, 1777, 1853,  248,
+            ...
+              98, 1290,  758,  527, 1620, 1146,   87, 1869, 1504, 1362],
+           dtype='int64', length=580)}","GridSearchCV(cv=3, error_score=nan,
+             estimator=Pipeline(memory=None,
+                                steps=[('cvec',
+                                        CountVectorizer(analyzer='word',
+                                                        binary=False,
+                                                        decode_error='strict',
+                                                        dtype=<class 'numpy.int64'>,
+                                                        encoding='utf-8',
+                                                        input='content',
+                                                        lowercase=True,
+                                                        max_df=1.0,
+                                                        max_features=None,
+                                                        min_df=1,
+                                                        ngram_range=(1, 1),
+                                                        preprocessor=None,
+                                                        stop_words=None,
+                                                        strip_accents=None,
+                                                        token_pattern='(?u)...
+                                               'marriott'],
+                                              ['became', 'full', 'unless',
+                                               'with', 'last', 'hers', 'is',
+                                               'hereafter', 'she', 'still',
+                                               'besides', 'during', 'give',
+                                               'all', 'whose', 'latter',
+                                               'itself', 'am', 'beyond',
+                                               'please', 'seemed', 'mostly',
+                                               'here', 'sometime', 'those',
+                                               'already', 'just', 'this',
+                                               'side', 'before', ...]]},
+             pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
+             scoring='accuracy', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 400, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 2), 'cvec__stop_words': ['the', 'and', 'a', 'to', 'it', 'be', 'for', 'with', 'that', 'marriott']}",40,12,0.9940872135994088,0.9985218033998522,0.9896551724137931
+6,tenant_failure,lr,f1,SentenceLemmas,"{'X_train': 1469      see “ loan term ” herein for more information .
 629     upon the cure of any trigger period ( and prov...
 25      “ cash management period ” ” mean ( i ) from a...
 495     “ trigger period ” mean ( a ) a default trigge...
@@ -474,261 +555,19 @@ Name: tenant_failure, Length: 580, dtype: int64, 'indices_train': Int64Index([14
                                                         token_pattern='(?u)...
                                                'be', 'for', 'with', 'that',
                                                'marriott'],
-                                              ['our', 'she', 'their', 'within',
-                                               'however', 'anywhere', 'further',
-                                               'may', 'also', 'up', 'besides',
-                                               'every', 'last', 'name',
-                                               'should', 'for', 'around',
-                                               'part', 'thence', 'almost',
-                                               'full', 'to', 'were', 'himself',
-                                               'would', 'how', 'your',
-                                               'everyone', 'during', 'have', ...]]},
+                                              ['became', 'full', 'unless',
+                                               'with', 'last', 'hers', 'is',
+                                               'hereafter', 'she', 'still',
+                                               'besides', 'during', 'give',
+                                               'all', 'whose', 'latter',
+                                               'itself', 'am', 'beyond',
+                                               'please', 'seemed', 'mostly',
+                                               'here', 'sometime', 'those',
+                                               'already', 'just', 'this',
+                                               'side', 'before', ...]]},
              pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
-             scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 400, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 4), 'cvec__stop_words': ['our', 'she', 'their', 'within', 'however', 'anywhere', 'further', 'may', 'also', 'up', 'besides', 'every', 'last', 'name', 'should', 'for', 'around', 'part', 'thence', 'almost', 'full', 'to', 'were', 'himself', 'would', 'how', 'your', 'everyone', 'during', 'have', 'about', 'itself', 'even', 'amongst', 'me', 'becomes', 'i', 'rather', 'onto', 'really', 'then', 'these', 'until', 'as', 'something', 'becoming', 'call', 'nothing', 'there', 'behind', 'too', 'say', 'with', 'yours', 'has', 'none', 'someone', 'together', 'whole', 'twenty', 'ca', 'empty', 'else', 'go', 'seemed', 'unless', 'not', 'now', 'although', 'latterly', 'except', 'doing', 'might', 'who', 'whereby', 'off', 'fifty', 'some', 'therein', 'four', 'here', 'no', 'first', 'will', 'by', 'former', 'whenever', 'so', 'top', 'ten', 'her', 'front', 'between', 'am', 'or', 'quite', 'more', 'the', 'him', 'sometimes', 'a', 'hereafter', 'from', 'made', 'three', 'only', 'cannot', 'same', 'noone', 'was', 'yourselves', 'indeed', 'those', 'beforehand', 'though', 'since', 'just', 'nine', 'yet', 'my', 'it', 'amount', 'that', 'hereupon', 'towards', 'already', 'back', 'somewhere', 'upon', 'where', 'third', 'several', 'be', 'does', 'than', 'while', 'yourself', 'into', 'become', 'this', 'what', 'somehow', 'whereas', 'five', 'once', 'neither', 'bottom', 'see', 'been', 'whether', 'above', 'twelve', 'which', 'under', 'because', 'wherever', 'thus', 'along', 'below', 'hence', 'least', 'next', 'his', 'namely', 'one', 'sometime', 'throughout', 'via', 'enough', 'still', 'whose', 'formerly', 'nevertheless', 'after', 'various', 'mostly', 'keep', 'of', 'whence', 'anyway', 'others', 'perhaps', 'whereupon', 'why', 'well', 'put', 'very', 'show', 'other', 'whoever', 'mine', 'hers', 'he', 'in', 'make', 'again', 'is', 'on', 're', 'whereafter', 'move', 'nowhere', 'thereupon', 'whatever', 'always', 'across', 'if', 'please', 'whither', 'its', 'thereby', 'through', 'beyond', 'before', 'sixty', 'whom', 'afterwards', 'hereby', 'either', 'anyone', 'moreover', 'give', 'you', 'are', 'forty', 'but', 'everywhere', 'beside', 'at', 'wherein', 'each', 'such', 'regarding', 'take', 'done', 'against', 'toward', 'ourselves', 'do', 'elsewhere', 'never', 'when', 'nobody', 'they', 'among', 'due', 'therefore', 'another', 'thereafter', 'myself', 'herself', 'nor', 'an', 'seem', 'two', 'became', 'get', 'out', 'meanwhile', 'most', 'serious', 'used', 'ours', 'us', 'over', 'anything', 'down', 'fifteen', 'any', 'hundred', 'could', 'few', 'side', 'herein', 'we', 'them', 'seems', 'both', 'ever', 'had', 'themselves', 'many', 'all', 'eleven', 'can', 'otherwise', 'per', 'much', 'thru', 'using', 'eight', 'and', 'often', 'alone', 'everything', 'seeming', 'anyhow', 'did', 'latter', 'being', 'must', 'own', 'without', 'less', 'six', 'marriott']}",37,11,0.9137254901960784,1.0,0.8571428571428572
-6,bankruptcy,lr,accuracy,SentenceLemmas,"{'X_train': 1541    “ approve leasing costs ” mean actual out - of...
-608     follow the termination of the trigger period (...
-25      “ cash management period ” ” mean ( i ) from a...
-666     during a cash sweep period trigger solely by (...
-854     “ hotel operator ” mean the ritz - carlton hot...
-                              ...                        
-1151    the mortgage lender be require to release fund...
-1791    on each mortgage loan payment date during the ...
-74      during the continuance of a cash trap period ,...
-1447    “ capital expenditures ” mean amount expend fo...
-533     the borrower be require to pay ( or because to...
-Name: SentenceLemmas, Length: 1353, dtype: object, 'X_test': 753     “ eligible institution ” mean with regard to t...
-1112    see “ description of the mortgage loan — loss ...
-427     additionally , if , at any time during a trigg...
-1640    the loan document require a furniture , fixtur...
-1493    amount so deposit be refer to as the “ immedia...
-                              ...                        
-1146    “ rollover reserve monthly deposit ” mean , fo...
-87      during the period in which neither cash trap p...
-1869    if a trigger period be continue , all availabl...
-1504    “ replacement ” for any period mean replacemen...
-1362    the borrower agree to notify mortgage lender p...
-Name: SentenceLemmas, Length: 580, dtype: object, 'y_train': 1541    0
-608     0
-25      0
-666     1
-854     0
-       ..
-1151    0
-1791    0
-74      0
-1447    0
-533     0
-Name: bankruptcy, Length: 1353, dtype: int64, 'y_test': 753     0
-1112    0
-427     0
-1640    0
-1493    0
-       ..
-1146    0
-87      0
-1869    0
-1504    0
-1362    0
-Name: bankruptcy, Length: 580, dtype: int64, 'indices_train': Int64Index([1541,  608,   25,  666,  854, 1263,  508,   52,  130, 1568,
-            ...
-            1113, 1389, 1895,  924, 1062, 1151, 1791,   74, 1447,  533],
-           dtype='int64', length=1353), 'indices_test': Int64Index([ 753, 1112,  427, 1640, 1493, 1579, 1299, 1777, 1853,  248,
-            ...
-              98, 1290,  758,  527, 1620, 1146,   87, 1869, 1504, 1362],
-           dtype='int64', length=580)}","GridSearchCV(cv=3, error_score=nan,
-             estimator=Pipeline(memory=None,
-                                steps=[('cvec',
-                                        CountVectorizer(analyzer='word',
-                                                        binary=False,
-                                                        decode_error='strict',
-                                                        dtype=<class 'numpy.int64'>,
-                                                        encoding='utf-8',
-                                                        input='content',
-                                                        lowercase=True,
-                                                        max_df=1.0,
-                                                        max_features=None,
-                                                        min_df=1,
-                                                        ngram_range=(1, 1),
-                                                        preprocessor=None,
-                                                        stop_words=None,
-                                                        strip_accents=None,
-                                                        token_pattern='(?u)...
-                                               'be', 'for', 'with', 'that',
-                                               'marriott'],
-                                              ['our', 'she', 'their', 'within',
-                                               'however', 'anywhere', 'further',
-                                               'may', 'also', 'up', 'besides',
-                                               'every', 'last', 'name',
-                                               'should', 'for', 'around',
-                                               'part', 'thence', 'almost',
-                                               'full', 'to', 'were', 'himself',
-                                               'would', 'how', 'your',
-                                               'everyone', 'during', 'have', ...]]},
-             pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
-             scoring='accuracy', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 400, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 2), 'cvec__stop_words': ['the', 'and', 'a', 'to', 'it', 'be', 'for', 'with', 'that', 'marriott']}",40,12,0.9940872135994088,0.9985218033998522,0.9896551724137931
-7,aggregate_debt_yield_fall,lr,f1,SentenceLemmas,"{'X_train': 727     follow the occurrence of a debt yield trigger ...
-1904    at such time as any cash management period end...
-420     during a trigger period , so long as no mortga...
-1711    “ cash management agreement ” mean that certai...
-1894    notwithstanding anything to the contrary conta...
-                              ...                        
-746     “ in - place underwrite noi debt yield ” or “ ...
-596     subject to exception describe below , the mort...
-721     the mortgage lender may , but be not obligate ...
-1311    upon enter into a franchise agreement , borrow...
-874     each of the clearing account and the cash mana...
-Name: SentenceLemmas, Length: 1353, dtype: object, 'X_test': 1427    borrower be also require to send direction not...
-1017    the lender have the right at any time and from...
-982     with each request for disbursement , the borro...
-967     the reserve accounts be require to be eligible...
-557     pursuant to the deposit account agreements , p...
-                              ...                        
-34      prior to the extension term , during the conti...
-71      if a hotel operating agreement cash trap perio...
-414     upon the cure of any trigger period ( and prov...
-790     “ eligible account ” mean an identifiable acco...
-1239    notwithstanding the foregoing , in connection ...
-Name: SentenceLemmas, Length: 580, dtype: object, 'y_train': 727     0
-1904    0
-420     0
-1711    0
-1894    0
-       ..
-746     0
-596     0
-721     0
-1311    0
-874     0
-Name: aggregate_debt_yield_fall, Length: 1353, dtype: int64, 'y_test': 1427    0
-1017    0
-982     0
-967     0
-557     0
-       ..
-34      0
-71      0
-414     0
-790     0
-1239    0
-Name: aggregate_debt_yield_fall, Length: 580, dtype: int64, 'indices_train': Int64Index([ 727, 1904,  420, 1711, 1894,   97, 1220,  729,  511,  579,
-            ...
-            1186,  903, 1876,  521,  658,  746,  596,  721, 1311,  874],
-           dtype='int64', length=1353), 'indices_test': Int64Index([1427, 1017,  982,  967,  557, 1282,  151, 1094,  708, 1738,
-            ...
-            1148,  568, 1792, 1201,  333,   34,   71,  414,  790, 1239],
-           dtype='int64', length=580)}","GridSearchCV(cv=3, error_score=nan,
-             estimator=Pipeline(memory=None,
-                                steps=[('cvec',
-                                        CountVectorizer(analyzer='word',
-                                                        binary=False,
-                                                        decode_error='strict',
-                                                        dtype=<class 'numpy.int64'>,
-                                                        encoding='utf-8',
-                                                        input='content',
-                                                        lowercase=True,
-                                                        max_df=1.0,
-                                                        max_features=None,
-                                                        min_df=1,
-                                                        ngram_range=(1, 1),
-                                                        preprocessor=None,
-                                                        stop_words=None,
-                                                        strip_accents=None,
-                                                        token_pattern='(?u)...
-                                               'be', 'for', 'with', 'that',
-                                               'marriott'],
-                                              ['our', 'she', 'their', 'within',
-                                               'however', 'anywhere', 'further',
-                                               'may', 'also', 'up', 'besides',
-                                               'every', 'last', 'name',
-                                               'should', 'for', 'around',
-                                               'part', 'thence', 'almost',
-                                               'full', 'to', 'were', 'himself',
-                                               'would', 'how', 'your',
-                                               'everyone', 'during', 'have', ...]]},
-             pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
-             scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 400, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 2), 'cvec__stop_words': ['our', 'she', 'their', 'within', 'however', 'anywhere', 'further', 'may', 'also', 'up', 'besides', 'every', 'last', 'name', 'should', 'for', 'around', 'part', 'thence', 'almost', 'full', 'to', 'were', 'himself', 'would', 'how', 'your', 'everyone', 'during', 'have', 'about', 'itself', 'even', 'amongst', 'me', 'becomes', 'i', 'rather', 'onto', 'really', 'then', 'these', 'until', 'as', 'something', 'becoming', 'call', 'nothing', 'there', 'behind', 'too', 'say', 'with', 'yours', 'has', 'none', 'someone', 'together', 'whole', 'twenty', 'ca', 'empty', 'else', 'go', 'seemed', 'unless', 'not', 'now', 'although', 'latterly', 'except', 'doing', 'might', 'who', 'whereby', 'off', 'fifty', 'some', 'therein', 'four', 'here', 'no', 'first', 'will', 'by', 'former', 'whenever', 'so', 'top', 'ten', 'her', 'front', 'between', 'am', 'or', 'quite', 'more', 'the', 'him', 'sometimes', 'a', 'hereafter', 'from', 'made', 'three', 'only', 'cannot', 'same', 'noone', 'was', 'yourselves', 'indeed', 'those', 'beforehand', 'though', 'since', 'just', 'nine', 'yet', 'my', 'it', 'amount', 'that', 'hereupon', 'towards', 'already', 'back', 'somewhere', 'upon', 'where', 'third', 'several', 'be', 'does', 'than', 'while', 'yourself', 'into', 'become', 'this', 'what', 'somehow', 'whereas', 'five', 'once', 'neither', 'bottom', 'see', 'been', 'whether', 'above', 'twelve', 'which', 'under', 'because', 'wherever', 'thus', 'along', 'below', 'hence', 'least', 'next', 'his', 'namely', 'one', 'sometime', 'throughout', 'via', 'enough', 'still', 'whose', 'formerly', 'nevertheless', 'after', 'various', 'mostly', 'keep', 'of', 'whence', 'anyway', 'others', 'perhaps', 'whereupon', 'why', 'well', 'put', 'very', 'show', 'other', 'whoever', 'mine', 'hers', 'he', 'in', 'make', 'again', 'is', 'on', 're', 'whereafter', 'move', 'nowhere', 'thereupon', 'whatever', 'always', 'across', 'if', 'please', 'whither', 'its', 'thereby', 'through', 'beyond', 'before', 'sixty', 'whom', 'afterwards', 'hereby', 'either', 'anyone', 'moreover', 'give', 'you', 'are', 'forty', 'but', 'everywhere', 'beside', 'at', 'wherein', 'each', 'such', 'regarding', 'take', 'done', 'against', 'toward', 'ourselves', 'do', 'elsewhere', 'never', 'when', 'nobody', 'they', 'among', 'due', 'therefore', 'another', 'thereafter', 'myself', 'herself', 'nor', 'an', 'seem', 'two', 'became', 'get', 'out', 'meanwhile', 'most', 'serious', 'used', 'ours', 'us', 'over', 'anything', 'down', 'fifteen', 'any', 'hundred', 'could', 'few', 'side', 'herein', 'we', 'them', 'seems', 'both', 'ever', 'had', 'themselves', 'many', 'all', 'eleven', 'can', 'otherwise', 'per', 'much', 'thru', 'using', 'eight', 'and', 'often', 'alone', 'everything', 'seeming', 'anyhow', 'did', 'latter', 'being', 'must', 'own', 'without', 'less', 'six', 'marriott']}",18,5,0.708994708994709,1.0,0.6666666666666665
-8,dscr_fall,lr,f1,SentenceLemmas,"{'X_train': 726     notwithstanding the foregoing , during the con...
-1904    at such time as any cash management period end...
-425     upon the cure of any trigger period ( and prov...
-1710    any excess cash flow reserve funds remain afte...
-1894    notwithstanding anything to the contrary conta...
-                              ...                        
-745     the underwritten in - place noi debt yield for...
-595     upon the first occurrence of a trigger period ...
-720     during the continuance of a mortgage loan even...
-1310    on each payment date , the borrower will be re...
-873     the borrower have establish and be require to ...
-Name: SentenceLemmas, Length: 1353, dtype: object, 'X_test': 1426    borrower be require to deposit , or because to...
-1016    the borrower be require to because all cash re...
-981     upon write request from the borrower and satis...
-966     the borrower will be liable for any deficiency...
-562     during a trigger period , in the event of any ...
-                              ...                        
-40      during the continuance of an event of default ...
-75      at any time no cash trap period or no hotel op...
-419     on each payment date occur on and after the oc...
-789     “ debt service coverage ratio ” or “ dscr ” me...
-1238    the lender be not require to disburse leasing ...
-Name: SentenceLemmas, Length: 580, dtype: object, 'y_train': 726     0
-1904    0
-425     0
-1710    0
-1894    0
-       ..
-745     0
-595     0
-720     0
-1310    0
-873     0
-Name: dscr_fall, Length: 1353, dtype: int64, 'y_test': 1426    0
-1016    0
-981     0
-966     0
-562     0
-       ..
-40      0
-75      0
-419     0
-789     0
-1238    0
-Name: dscr_fall, Length: 580, dtype: int64, 'indices_train': Int64Index([ 726, 1904,  425, 1710, 1894,  110, 1219,  728,  516,  578,
-            ...
-            1185,  902, 1876,  526,  657,  745,  595,  720, 1310,  873],
-           dtype='int64', length=1353), 'indices_test': Int64Index([1426, 1016,  981,  966,  562, 1281,  164, 1093,  707, 1737,
-            ...
-            1147,  109, 1791, 1200,  339,   40,   75,  419,  789, 1238],
-           dtype='int64', length=580)}","GridSearchCV(cv=3, error_score=nan,
-             estimator=Pipeline(memory=None,
-                                steps=[('cvec',
-                                        CountVectorizer(analyzer='word',
-                                                        binary=False,
-                                                        decode_error='strict',
-                                                        dtype=<class 'numpy.int64'>,
-                                                        encoding='utf-8',
-                                                        input='content',
-                                                        lowercase=True,
-                                                        max_df=1.0,
-                                                        max_features=None,
-                                                        min_df=1,
-                                                        ngram_range=(1, 1),
-                                                        preprocessor=None,
-                                                        stop_words=None,
-                                                        strip_accents=None,
-                                                        token_pattern='(?u)...
-                                               'be', 'for', 'with', 'that',
-                                               'marriott'],
-                                              ['our', 'she', 'their', 'within',
-                                               'however', 'anywhere', 'further',
-                                               'may', 'also', 'up', 'besides',
-                                               'every', 'last', 'name',
-                                               'should', 'for', 'around',
-                                               'part', 'thence', 'almost',
-                                               'full', 'to', 'were', 'himself',
-                                               'would', 'how', 'your',
-                                               'everyone', 'during', 'have', ...]]},
-             pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
-             scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 200, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 2), 'cvec__stop_words': ['our', 'she', 'their', 'within', 'however', 'anywhere', 'further', 'may', 'also', 'up', 'besides', 'every', 'last', 'name', 'should', 'for', 'around', 'part', 'thence', 'almost', 'full', 'to', 'were', 'himself', 'would', 'how', 'your', 'everyone', 'during', 'have', 'about', 'itself', 'even', 'amongst', 'me', 'becomes', 'i', 'rather', 'onto', 'really', 'then', 'these', 'until', 'as', 'something', 'becoming', 'call', 'nothing', 'there', 'behind', 'too', 'say', 'with', 'yours', 'has', 'none', 'someone', 'together', 'whole', 'twenty', 'ca', 'empty', 'else', 'go', 'seemed', 'unless', 'not', 'now', 'although', 'latterly', 'except', 'doing', 'might', 'who', 'whereby', 'off', 'fifty', 'some', 'therein', 'four', 'here', 'no', 'first', 'will', 'by', 'former', 'whenever', 'so', 'top', 'ten', 'her', 'front', 'between', 'am', 'or', 'quite', 'more', 'the', 'him', 'sometimes', 'a', 'hereafter', 'from', 'made', 'three', 'only', 'cannot', 'same', 'noone', 'was', 'yourselves', 'indeed', 'those', 'beforehand', 'though', 'since', 'just', 'nine', 'yet', 'my', 'it', 'amount', 'that', 'hereupon', 'towards', 'already', 'back', 'somewhere', 'upon', 'where', 'third', 'several', 'be', 'does', 'than', 'while', 'yourself', 'into', 'become', 'this', 'what', 'somehow', 'whereas', 'five', 'once', 'neither', 'bottom', 'see', 'been', 'whether', 'above', 'twelve', 'which', 'under', 'because', 'wherever', 'thus', 'along', 'below', 'hence', 'least', 'next', 'his', 'namely', 'one', 'sometime', 'throughout', 'via', 'enough', 'still', 'whose', 'formerly', 'nevertheless', 'after', 'various', 'mostly', 'keep', 'of', 'whence', 'anyway', 'others', 'perhaps', 'whereupon', 'why', 'well', 'put', 'very', 'show', 'other', 'whoever', 'mine', 'hers', 'he', 'in', 'make', 'again', 'is', 'on', 're', 'whereafter', 'move', 'nowhere', 'thereupon', 'whatever', 'always', 'across', 'if', 'please', 'whither', 'its', 'thereby', 'through', 'beyond', 'before', 'sixty', 'whom', 'afterwards', 'hereby', 'either', 'anyone', 'moreover', 'give', 'you', 'are', 'forty', 'but', 'everywhere', 'beside', 'at', 'wherein', 'each', 'such', 'regarding', 'take', 'done', 'against', 'toward', 'ourselves', 'do', 'elsewhere', 'never', 'when', 'nobody', 'they', 'among', 'due', 'therefore', 'another', 'thereafter', 'myself', 'herself', 'nor', 'an', 'seem', 'two', 'became', 'get', 'out', 'meanwhile', 'most', 'serious', 'used', 'ours', 'us', 'over', 'anything', 'down', 'fifteen', 'any', 'hundred', 'could', 'few', 'side', 'herein', 'we', 'them', 'seems', 'both', 'ever', 'had', 'themselves', 'many', 'all', 'eleven', 'can', 'otherwise', 'per', 'much', 'thru', 'using', 'eight', 'and', 'often', 'alone', 'everything', 'seeming', 'anyhow', 'did', 'latter', 'being', 'must', 'own', 'without', 'less', 'six', 'marriott']}",18,5,0.9153439153439153,0.9600000000000001,0.8000000000000002
-9,renovations,lr,f1,SentenceLemmas,"{'X_train': 1423    the borrower direct all exist tenant of the pr...
+             scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 400, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 4), 'cvec__stop_words': ['became', 'full', 'unless', 'with', 'last', 'hers', 'is', 'hereafter', 'she', 'still', 'besides', 'during', 'give', 'all', 'whose', 'latter', 'itself', 'am', 'beyond', 'please', 'seemed', 'mostly', 'here', 'sometime', 'those', 'already', 'just', 'this', 'side', 'before', 'everything', 'afterwards', 'via', 'of', 'each', 'any', 'nevertheless', 'onto', 'about', 'someone', 'between', 'might', 'thus', 'otherwise', 'after', 'within', 'toward', 'amongst', 'for', 'once', 'amount', 'put', 'wherever', 'enough', 'his', 'their', 'forty', 'by', 'fifty', 'or', 'five', 'more', 're', 'both', 'done', 'thereby', 'and', 'whether', 'never', 'latterly', 'keep', 'again', 'then', 'myself', 'very', 'nothing', 'be', 'yours', 'at', 'whereas', 'because', 'has', 'everywhere', 'indeed', 'others', 'first', 'most', 'fifteen', 'from', 'everyone', 'being', 'along', 'mine', 'twelve', 'we', 'else', 'formerly', 'also', 'under', 'he', 'whence', 'can', 'whereafter', 'hence', 'quite', 'why', 'namely', 'than', 'whom', 'me', 'to', 'whoever', 'part', 'around', 'noone', 'without', 'except', 'her', 'in', 'somewhere', 'thereafter', 'elsewhere', 'if', 'what', 'whenever', 'anyway', 'empty', 'eight', 'many', 'almost', 'us', 'move', 'who', 'a', 'there', 'less', 'they', 'whatever', 'your', 'how', 'make', 'may', 'over', 'hereupon', 'neither', 'ours', 'due', 'various', 'themselves', 'herein', 'top', 'yet', 'anything', 'so', 'yourselves', 'nine', 'hereby', 'while', 'however', 'either', 'such', 'hundred', 'ca', 'anyhow', 'our', 'three', 'beside', 'thru', 'together', 'whole', 'could', 'though', 'further', 'call', 'are', 'should', 'beforehand', 'get', 'its', 'behind', 'twenty', 'used', 'towards', 'you', 'see', 'himself', 'when', 'among', 'nowhere', 'becoming', 'using', 'although', 'an', 'herself', 'nor', 'perhaps', 'him', 'one', 'as', 'now', 'seems', 'every', 'too', 'somehow', 'former', 'whereby', 'would', 'least', 'alone', 'same', 'nobody', 'even', 'until', 'show', 'six', 'off', 'front', 'becomes', 'something', 'per', 'take', 'through', 'were', 'whereupon', 'anywhere', 'does', 'yourself', 'into', 'throughout', 'meanwhile', 'say', 'do', 'on', 'own', 'seeming', 'against', 'become', 'none', 'well', 'made', 'must', 'sometimes', 'therefore', 'my', 'rather', 'only', 'across', 'down', 'thereupon', 'that', 'four', 'where', 'ourselves', 'really', 'did', 'the', 'other', 'will', 'much', 'out', 'regarding', 'them', 'thence', 'but', 'back', 'since', 'up', 'seem', 'serious', 'ten', 'therein', 'always', 'which', 'whither', 'above', 'anyone', 'below', 'bottom', 'doing', 'often', 'eleven', 'have', 'name', 'been', 'few', 'not', 'several', 'no', 'i', 'next', 'two', 'cannot', 'sixty', 'upon', 'wherein', 'another', 'moreover', 'some', 'these', 'was', 'third', 'go', 'ever', 'it', 'had', 'marriott']}",37,11,0.9137254901960784,1.0,0.8571428571428572
+7,renovations,lr,f1,SentenceLemmas,"{'X_train': 1423    the borrower direct all exist tenant of the pr...
 366     any excess cash flow reserve funds remain on d...
 4       available fund in each cash management account...
 999     “ approved management agreement ” mean ( i ) e...
@@ -798,17 +637,182 @@ Name: renovations, Length: 580, dtype: int64, 'indices_train': Int64Index([1423,
                                                         token_pattern='(?u)...
                                                'be', 'for', 'with', 'that',
                                                'marriott'],
-                                              ['our', 'she', 'their', 'within',
-                                               'however', 'anywhere', 'further',
-                                               'may', 'also', 'up', 'besides',
-                                               'every', 'last', 'name',
-                                               'should', 'for', 'around',
-                                               'part', 'thence', 'almost',
-                                               'full', 'to', 'were', 'himself',
-                                               'would', 'how', 'your',
-                                               'everyone', 'during', 'have', ...]]},
+                                              ['became', 'full', 'unless',
+                                               'with', 'last', 'hers', 'is',
+                                               'hereafter', 'she', 'still',
+                                               'besides', 'during', 'give',
+                                               'all', 'whose', 'latter',
+                                               'itself', 'am', 'beyond',
+                                               'please', 'seemed', 'mostly',
+                                               'here', 'sometime', 'those',
+                                               'already', 'just', 'this',
+                                               'side', 'before', ...]]},
              pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
              scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 100, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 2), 'cvec__stop_words': ['the', 'to', 'of', 'be', 'and', 'in', 'a', 'marriott']}",24,7,0.8282828282828283,0.9090909090909091,0.923076923076923
+8,aggregate_debt_yield_fall,lr,f1,SentenceLemmas,"{'X_train': 727     follow the occurrence of a debt yield trigger ...
+1904    at such time as any cash management period end...
+420     during a trigger period , so long as no mortga...
+1711    “ cash management agreement ” mean that certai...
+1894    notwithstanding anything to the contrary conta...
+                              ...                        
+746     “ in - place underwrite noi debt yield ” or “ ...
+596     subject to exception describe below , the mort...
+721     the mortgage lender may , but be not obligate ...
+1311    upon enter into a franchise agreement , borrow...
+874     each of the clearing account and the cash mana...
+Name: SentenceLemmas, Length: 1353, dtype: object, 'X_test': 1427    borrower be also require to send direction not...
+1017    the lender have the right at any time and from...
+982     with each request for disbursement , the borro...
+967     the reserve accounts be require to be eligible...
+557     pursuant to the deposit account agreements , p...
+                              ...                        
+34      prior to the extension term , during the conti...
+71      if a hotel operating agreement cash trap perio...
+414     upon the cure of any trigger period ( and prov...
+790     “ eligible account ” mean an identifiable acco...
+1239    notwithstanding the foregoing , in connection ...
+Name: SentenceLemmas, Length: 580, dtype: object, 'y_train': 727     0
+1904    0
+420     0
+1711    0
+1894    0
+       ..
+746     0
+596     0
+721     0
+1311    0
+874     0
+Name: aggregate_debt_yield_fall, Length: 1353, dtype: int64, 'y_test': 1427    0
+1017    0
+982     0
+967     0
+557     0
+       ..
+34      0
+71      0
+414     0
+790     0
+1239    0
+Name: aggregate_debt_yield_fall, Length: 580, dtype: int64, 'indices_train': Int64Index([ 727, 1904,  420, 1711, 1894,   97, 1220,  729,  511,  579,
+            ...
+            1186,  903, 1876,  521,  658,  746,  596,  721, 1311,  874],
+           dtype='int64', length=1353), 'indices_test': Int64Index([1427, 1017,  982,  967,  557, 1282,  151, 1094,  708, 1738,
+            ...
+            1148,  568, 1792, 1201,  333,   34,   71,  414,  790, 1239],
+           dtype='int64', length=580)}","GridSearchCV(cv=3, error_score=nan,
+             estimator=Pipeline(memory=None,
+                                steps=[('cvec',
+                                        CountVectorizer(analyzer='word',
+                                                        binary=False,
+                                                        decode_error='strict',
+                                                        dtype=<class 'numpy.int64'>,
+                                                        encoding='utf-8',
+                                                        input='content',
+                                                        lowercase=True,
+                                                        max_df=1.0,
+                                                        max_features=None,
+                                                        min_df=1,
+                                                        ngram_range=(1, 1),
+                                                        preprocessor=None,
+                                                        stop_words=None,
+                                                        strip_accents=None,
+                                                        token_pattern='(?u)...
+                                               'be', 'for', 'with', 'that',
+                                               'marriott'],
+                                              ['became', 'full', 'unless',
+                                               'with', 'last', 'hers', 'is',
+                                               'hereafter', 'she', 'still',
+                                               'besides', 'during', 'give',
+                                               'all', 'whose', 'latter',
+                                               'itself', 'am', 'beyond',
+                                               'please', 'seemed', 'mostly',
+                                               'here', 'sometime', 'those',
+                                               'already', 'just', 'this',
+                                               'side', 'before', ...]]},
+             pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
+             scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 400, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 2), 'cvec__stop_words': ['became', 'full', 'unless', 'with', 'last', 'hers', 'is', 'hereafter', 'she', 'still', 'besides', 'during', 'give', 'all', 'whose', 'latter', 'itself', 'am', 'beyond', 'please', 'seemed', 'mostly', 'here', 'sometime', 'those', 'already', 'just', 'this', 'side', 'before', 'everything', 'afterwards', 'via', 'of', 'each', 'any', 'nevertheless', 'onto', 'about', 'someone', 'between', 'might', 'thus', 'otherwise', 'after', 'within', 'toward', 'amongst', 'for', 'once', 'amount', 'put', 'wherever', 'enough', 'his', 'their', 'forty', 'by', 'fifty', 'or', 'five', 'more', 're', 'both', 'done', 'thereby', 'and', 'whether', 'never', 'latterly', 'keep', 'again', 'then', 'myself', 'very', 'nothing', 'be', 'yours', 'at', 'whereas', 'because', 'has', 'everywhere', 'indeed', 'others', 'first', 'most', 'fifteen', 'from', 'everyone', 'being', 'along', 'mine', 'twelve', 'we', 'else', 'formerly', 'also', 'under', 'he', 'whence', 'can', 'whereafter', 'hence', 'quite', 'why', 'namely', 'than', 'whom', 'me', 'to', 'whoever', 'part', 'around', 'noone', 'without', 'except', 'her', 'in', 'somewhere', 'thereafter', 'elsewhere', 'if', 'what', 'whenever', 'anyway', 'empty', 'eight', 'many', 'almost', 'us', 'move', 'who', 'a', 'there', 'less', 'they', 'whatever', 'your', 'how', 'make', 'may', 'over', 'hereupon', 'neither', 'ours', 'due', 'various', 'themselves', 'herein', 'top', 'yet', 'anything', 'so', 'yourselves', 'nine', 'hereby', 'while', 'however', 'either', 'such', 'hundred', 'ca', 'anyhow', 'our', 'three', 'beside', 'thru', 'together', 'whole', 'could', 'though', 'further', 'call', 'are', 'should', 'beforehand', 'get', 'its', 'behind', 'twenty', 'used', 'towards', 'you', 'see', 'himself', 'when', 'among', 'nowhere', 'becoming', 'using', 'although', 'an', 'herself', 'nor', 'perhaps', 'him', 'one', 'as', 'now', 'seems', 'every', 'too', 'somehow', 'former', 'whereby', 'would', 'least', 'alone', 'same', 'nobody', 'even', 'until', 'show', 'six', 'off', 'front', 'becomes', 'something', 'per', 'take', 'through', 'were', 'whereupon', 'anywhere', 'does', 'yourself', 'into', 'throughout', 'meanwhile', 'say', 'do', 'on', 'own', 'seeming', 'against', 'become', 'none', 'well', 'made', 'must', 'sometimes', 'therefore', 'my', 'rather', 'only', 'across', 'down', 'thereupon', 'that', 'four', 'where', 'ourselves', 'really', 'did', 'the', 'other', 'will', 'much', 'out', 'regarding', 'them', 'thence', 'but', 'back', 'since', 'up', 'seem', 'serious', 'ten', 'therein', 'always', 'which', 'whither', 'above', 'anyone', 'below', 'bottom', 'doing', 'often', 'eleven', 'have', 'name', 'been', 'few', 'not', 'several', 'no', 'i', 'next', 'two', 'cannot', 'sixty', 'upon', 'wherein', 'another', 'moreover', 'some', 'these', 'was', 'third', 'go', 'ever', 'it', 'had', 'marriott']}",18,5,0.708994708994709,1.0,0.6666666666666665
+9,dscr_fall,lr,f1,SentenceLemmas,"{'X_train': 726     notwithstanding the foregoing , during the con...
+1904    at such time as any cash management period end...
+425     upon the cure of any trigger period ( and prov...
+1710    any excess cash flow reserve funds remain afte...
+1894    notwithstanding anything to the contrary conta...
+                              ...                        
+745     the underwritten in - place noi debt yield for...
+595     upon the first occurrence of a trigger period ...
+720     during the continuance of a mortgage loan even...
+1310    on each payment date , the borrower will be re...
+873     the borrower have establish and be require to ...
+Name: SentenceLemmas, Length: 1353, dtype: object, 'X_test': 1426    borrower be require to deposit , or because to...
+1016    the borrower be require to because all cash re...
+981     upon write request from the borrower and satis...
+966     the borrower will be liable for any deficiency...
+562     during a trigger period , in the event of any ...
+                              ...                        
+40      during the continuance of an event of default ...
+75      at any time no cash trap period or no hotel op...
+419     on each payment date occur on and after the oc...
+789     “ debt service coverage ratio ” or “ dscr ” me...
+1238    the lender be not require to disburse leasing ...
+Name: SentenceLemmas, Length: 580, dtype: object, 'y_train': 726     0
+1904    0
+425     0
+1710    0
+1894    0
+       ..
+745     0
+595     0
+720     0
+1310    0
+873     0
+Name: dscr_fall, Length: 1353, dtype: int64, 'y_test': 1426    0
+1016    0
+981     0
+966     0
+562     0
+       ..
+40      0
+75      0
+419     0
+789     0
+1238    0
+Name: dscr_fall, Length: 580, dtype: int64, 'indices_train': Int64Index([ 726, 1904,  425, 1710, 1894,  110, 1219,  728,  516,  578,
+            ...
+            1185,  902, 1876,  526,  657,  745,  595,  720, 1310,  873],
+           dtype='int64', length=1353), 'indices_test': Int64Index([1426, 1016,  981,  966,  562, 1281,  164, 1093,  707, 1737,
+            ...
+            1147,  109, 1791, 1200,  339,   40,   75,  419,  789, 1238],
+           dtype='int64', length=580)}","GridSearchCV(cv=3, error_score=nan,
+             estimator=Pipeline(memory=None,
+                                steps=[('cvec',
+                                        CountVectorizer(analyzer='word',
+                                                        binary=False,
+                                                        decode_error='strict',
+                                                        dtype=<class 'numpy.int64'>,
+                                                        encoding='utf-8',
+                                                        input='content',
+                                                        lowercase=True,
+                                                        max_df=1.0,
+                                                        max_features=None,
+                                                        min_df=1,
+                                                        ngram_range=(1, 1),
+                                                        preprocessor=None,
+                                                        stop_words=None,
+                                                        strip_accents=None,
+                                                        token_pattern='(?u)...
+                                               'be', 'for', 'with', 'that',
+                                               'marriott'],
+                                              ['became', 'full', 'unless',
+                                               'with', 'last', 'hers', 'is',
+                                               'hereafter', 'she', 'still',
+                                               'besides', 'during', 'give',
+                                               'all', 'whose', 'latter',
+                                               'itself', 'am', 'beyond',
+                                               'please', 'seemed', 'mostly',
+                                               'here', 'sometime', 'those',
+                                               'already', 'just', 'this',
+                                               'side', 'before', ...]]},
+             pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
+             scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 200, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 2), 'cvec__stop_words': ['became', 'full', 'unless', 'with', 'last', 'hers', 'is', 'hereafter', 'she', 'still', 'besides', 'during', 'give', 'all', 'whose', 'latter', 'itself', 'am', 'beyond', 'please', 'seemed', 'mostly', 'here', 'sometime', 'those', 'already', 'just', 'this', 'side', 'before', 'everything', 'afterwards', 'via', 'of', 'each', 'any', 'nevertheless', 'onto', 'about', 'someone', 'between', 'might', 'thus', 'otherwise', 'after', 'within', 'toward', 'amongst', 'for', 'once', 'amount', 'put', 'wherever', 'enough', 'his', 'their', 'forty', 'by', 'fifty', 'or', 'five', 'more', 're', 'both', 'done', 'thereby', 'and', 'whether', 'never', 'latterly', 'keep', 'again', 'then', 'myself', 'very', 'nothing', 'be', 'yours', 'at', 'whereas', 'because', 'has', 'everywhere', 'indeed', 'others', 'first', 'most', 'fifteen', 'from', 'everyone', 'being', 'along', 'mine', 'twelve', 'we', 'else', 'formerly', 'also', 'under', 'he', 'whence', 'can', 'whereafter', 'hence', 'quite', 'why', 'namely', 'than', 'whom', 'me', 'to', 'whoever', 'part', 'around', 'noone', 'without', 'except', 'her', 'in', 'somewhere', 'thereafter', 'elsewhere', 'if', 'what', 'whenever', 'anyway', 'empty', 'eight', 'many', 'almost', 'us', 'move', 'who', 'a', 'there', 'less', 'they', 'whatever', 'your', 'how', 'make', 'may', 'over', 'hereupon', 'neither', 'ours', 'due', 'various', 'themselves', 'herein', 'top', 'yet', 'anything', 'so', 'yourselves', 'nine', 'hereby', 'while', 'however', 'either', 'such', 'hundred', 'ca', 'anyhow', 'our', 'three', 'beside', 'thru', 'together', 'whole', 'could', 'though', 'further', 'call', 'are', 'should', 'beforehand', 'get', 'its', 'behind', 'twenty', 'used', 'towards', 'you', 'see', 'himself', 'when', 'among', 'nowhere', 'becoming', 'using', 'although', 'an', 'herself', 'nor', 'perhaps', 'him', 'one', 'as', 'now', 'seems', 'every', 'too', 'somehow', 'former', 'whereby', 'would', 'least', 'alone', 'same', 'nobody', 'even', 'until', 'show', 'six', 'off', 'front', 'becomes', 'something', 'per', 'take', 'through', 'were', 'whereupon', 'anywhere', 'does', 'yourself', 'into', 'throughout', 'meanwhile', 'say', 'do', 'on', 'own', 'seeming', 'against', 'become', 'none', 'well', 'made', 'must', 'sometimes', 'therefore', 'my', 'rather', 'only', 'across', 'down', 'thereupon', 'that', 'four', 'where', 'ourselves', 'really', 'did', 'the', 'other', 'will', 'much', 'out', 'regarding', 'them', 'thence', 'but', 'back', 'since', 'up', 'seem', 'serious', 'ten', 'therein', 'always', 'which', 'whither', 'above', 'anyone', 'below', 'bottom', 'doing', 'often', 'eleven', 'have', 'name', 'been', 'few', 'not', 'several', 'no', 'i', 'next', 'two', 'cannot', 'sixty', 'upon', 'wherein', 'another', 'moreover', 'some', 'these', 'was', 'third', 'go', 'ever', 'it', 'had', 'marriott']}",18,5,0.9153439153439153,0.9600000000000001,0.8000000000000002
 10,operator_termination,lr,f1,SentenceLemmas,"{'X_train': 724     during a cash sweep period cause solely by a c...
 1904    at such time as any cash management period end...
 423     additionally , if , at any time during a trigg...
@@ -879,17 +883,18 @@ Name: operator_termination, Length: 580, dtype: int64, 'indices_train': Int64Ind
                                                         token_pattern='(?u)...
                                                'be', 'for', 'with', 'that',
                                                'marriott'],
-                                              ['our', 'she', 'their', 'within',
-                                               'however', 'anywhere', 'further',
-                                               'may', 'also', 'up', 'besides',
-                                               'every', 'last', 'name',
-                                               'should', 'for', 'around',
-                                               'part', 'thence', 'almost',
-                                               'full', 'to', 'were', 'himself',
-                                               'would', 'how', 'your',
-                                               'everyone', 'during', 'have', ...]]},
+                                              ['became', 'full', 'unless',
+                                               'with', 'last', 'hers', 'is',
+                                               'hereafter', 'she', 'still',
+                                               'besides', 'during', 'give',
+                                               'all', 'whose', 'latter',
+                                               'itself', 'am', 'beyond',
+                                               'please', 'seemed', 'mostly',
+                                               'here', 'sometime', 'those',
+                                               'already', 'just', 'this',
+                                               'side', 'before', ...]]},
              pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
-             scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 400, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 2), 'cvec__stop_words': ['our', 'she', 'their', 'within', 'however', 'anywhere', 'further', 'may', 'also', 'up', 'besides', 'every', 'last', 'name', 'should', 'for', 'around', 'part', 'thence', 'almost', 'full', 'to', 'were', 'himself', 'would', 'how', 'your', 'everyone', 'during', 'have', 'about', 'itself', 'even', 'amongst', 'me', 'becomes', 'i', 'rather', 'onto', 'really', 'then', 'these', 'until', 'as', 'something', 'becoming', 'call', 'nothing', 'there', 'behind', 'too', 'say', 'with', 'yours', 'has', 'none', 'someone', 'together', 'whole', 'twenty', 'ca', 'empty', 'else', 'go', 'seemed', 'unless', 'not', 'now', 'although', 'latterly', 'except', 'doing', 'might', 'who', 'whereby', 'off', 'fifty', 'some', 'therein', 'four', 'here', 'no', 'first', 'will', 'by', 'former', 'whenever', 'so', 'top', 'ten', 'her', 'front', 'between', 'am', 'or', 'quite', 'more', 'the', 'him', 'sometimes', 'a', 'hereafter', 'from', 'made', 'three', 'only', 'cannot', 'same', 'noone', 'was', 'yourselves', 'indeed', 'those', 'beforehand', 'though', 'since', 'just', 'nine', 'yet', 'my', 'it', 'amount', 'that', 'hereupon', 'towards', 'already', 'back', 'somewhere', 'upon', 'where', 'third', 'several', 'be', 'does', 'than', 'while', 'yourself', 'into', 'become', 'this', 'what', 'somehow', 'whereas', 'five', 'once', 'neither', 'bottom', 'see', 'been', 'whether', 'above', 'twelve', 'which', 'under', 'because', 'wherever', 'thus', 'along', 'below', 'hence', 'least', 'next', 'his', 'namely', 'one', 'sometime', 'throughout', 'via', 'enough', 'still', 'whose', 'formerly', 'nevertheless', 'after', 'various', 'mostly', 'keep', 'of', 'whence', 'anyway', 'others', 'perhaps', 'whereupon', 'why', 'well', 'put', 'very', 'show', 'other', 'whoever', 'mine', 'hers', 'he', 'in', 'make', 'again', 'is', 'on', 're', 'whereafter', 'move', 'nowhere', 'thereupon', 'whatever', 'always', 'across', 'if', 'please', 'whither', 'its', 'thereby', 'through', 'beyond', 'before', 'sixty', 'whom', 'afterwards', 'hereby', 'either', 'anyone', 'moreover', 'give', 'you', 'are', 'forty', 'but', 'everywhere', 'beside', 'at', 'wherein', 'each', 'such', 'regarding', 'take', 'done', 'against', 'toward', 'ourselves', 'do', 'elsewhere', 'never', 'when', 'nobody', 'they', 'among', 'due', 'therefore', 'another', 'thereafter', 'myself', 'herself', 'nor', 'an', 'seem', 'two', 'became', 'get', 'out', 'meanwhile', 'most', 'serious', 'used', 'ours', 'us', 'over', 'anything', 'down', 'fifteen', 'any', 'hundred', 'could', 'few', 'side', 'herein', 'we', 'them', 'seems', 'both', 'ever', 'had', 'themselves', 'many', 'all', 'eleven', 'can', 'otherwise', 'per', 'much', 'thru', 'using', 'eight', 'and', 'often', 'alone', 'everything', 'seeming', 'anyhow', 'did', 'latter', 'being', 'must', 'own', 'without', 'less', 'six', 'marriott']}",17,5,0.7619047619047619,1.0,0.4444444444444445
+             scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 400, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 2), 'cvec__stop_words': ['became', 'full', 'unless', 'with', 'last', 'hers', 'is', 'hereafter', 'she', 'still', 'besides', 'during', 'give', 'all', 'whose', 'latter', 'itself', 'am', 'beyond', 'please', 'seemed', 'mostly', 'here', 'sometime', 'those', 'already', 'just', 'this', 'side', 'before', 'everything', 'afterwards', 'via', 'of', 'each', 'any', 'nevertheless', 'onto', 'about', 'someone', 'between', 'might', 'thus', 'otherwise', 'after', 'within', 'toward', 'amongst', 'for', 'once', 'amount', 'put', 'wherever', 'enough', 'his', 'their', 'forty', 'by', 'fifty', 'or', 'five', 'more', 're', 'both', 'done', 'thereby', 'and', 'whether', 'never', 'latterly', 'keep', 'again', 'then', 'myself', 'very', 'nothing', 'be', 'yours', 'at', 'whereas', 'because', 'has', 'everywhere', 'indeed', 'others', 'first', 'most', 'fifteen', 'from', 'everyone', 'being', 'along', 'mine', 'twelve', 'we', 'else', 'formerly', 'also', 'under', 'he', 'whence', 'can', 'whereafter', 'hence', 'quite', 'why', 'namely', 'than', 'whom', 'me', 'to', 'whoever', 'part', 'around', 'noone', 'without', 'except', 'her', 'in', 'somewhere', 'thereafter', 'elsewhere', 'if', 'what', 'whenever', 'anyway', 'empty', 'eight', 'many', 'almost', 'us', 'move', 'who', 'a', 'there', 'less', 'they', 'whatever', 'your', 'how', 'make', 'may', 'over', 'hereupon', 'neither', 'ours', 'due', 'various', 'themselves', 'herein', 'top', 'yet', 'anything', 'so', 'yourselves', 'nine', 'hereby', 'while', 'however', 'either', 'such', 'hundred', 'ca', 'anyhow', 'our', 'three', 'beside', 'thru', 'together', 'whole', 'could', 'though', 'further', 'call', 'are', 'should', 'beforehand', 'get', 'its', 'behind', 'twenty', 'used', 'towards', 'you', 'see', 'himself', 'when', 'among', 'nowhere', 'becoming', 'using', 'although', 'an', 'herself', 'nor', 'perhaps', 'him', 'one', 'as', 'now', 'seems', 'every', 'too', 'somehow', 'former', 'whereby', 'would', 'least', 'alone', 'same', 'nobody', 'even', 'until', 'show', 'six', 'off', 'front', 'becomes', 'something', 'per', 'take', 'through', 'were', 'whereupon', 'anywhere', 'does', 'yourself', 'into', 'throughout', 'meanwhile', 'say', 'do', 'on', 'own', 'seeming', 'against', 'become', 'none', 'well', 'made', 'must', 'sometimes', 'therefore', 'my', 'rather', 'only', 'across', 'down', 'thereupon', 'that', 'four', 'where', 'ourselves', 'really', 'did', 'the', 'other', 'will', 'much', 'out', 'regarding', 'them', 'thence', 'but', 'back', 'since', 'up', 'seem', 'serious', 'ten', 'therein', 'always', 'which', 'whither', 'above', 'anyone', 'below', 'bottom', 'doing', 'often', 'eleven', 'have', 'name', 'been', 'few', 'not', 'several', 'no', 'i', 'next', 'two', 'cannot', 'sixty', 'upon', 'wherein', 'another', 'moreover', 'some', 'these', 'was', 'third', 'go', 'ever', 'it', 'had', 'marriott']}",17,5,0.7619047619047619,1.0,0.4444444444444445
 11,sponsor_termination,lr,f1,SentenceLemmas,"{'X_train': 1686    so long as the management agreement ( or an ap...
 1482    in no event may , at any time , the aggregate ...
 287     upon the first occurrence of a trigger period ...
@@ -960,180 +965,19 @@ Name: sponsor_termination, Length: 580, dtype: int64, 'indices_train': Int64Inde
                                                         token_pattern='(?u)...
                                                'be', 'for', 'with', 'that',
                                                'marriott'],
-                                              ['our', 'she', 'their', 'within',
-                                               'however', 'anywhere', 'further',
-                                               'may', 'also', 'up', 'besides',
-                                               'every', 'last', 'name',
-                                               'should', 'for', 'around',
-                                               'part', 'thence', 'almost',
-                                               'full', 'to', 'were', 'himself',
-                                               'would', 'how', 'your',
-                                               'everyone', 'during', 'have', ...]]},
+                                              ['became', 'full', 'unless',
+                                               'with', 'last', 'hers', 'is',
+                                               'hereafter', 'she', 'still',
+                                               'besides', 'during', 'give',
+                                               'all', 'whose', 'latter',
+                                               'itself', 'am', 'beyond',
+                                               'please', 'seemed', 'mostly',
+                                               'here', 'sometime', 'those',
+                                               'already', 'just', 'this',
+                                               'side', 'before', ...]]},
              pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
              scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 1000, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 2), 'cvec__stop_words': ['the', 'to', 'of', 'be', 'and', 'in', 'a', 'marriott']}",14,4,0.6222222222222222,1.0,0.4
-12,mezzanine_outstanding,lr,f1,SentenceLemmas,"{'X_train': 1541    “ approve leasing costs ” mean actual out - of...
-1315    if at any time the mortgage lender determine t...
-788     as of the cut - off date , the cash management...
-687     during the continuance of a cash management pe...
-1839    the mortgage lender will not be obligate to di...
-                              ...                        
-947     -PRON- can not assure -PRON- that circumstance...
-692     if a cash sweep period be continue , ( a ) if ...
-163     in addition , during the continuance of a mort...
-652     in the event of a cash sweep period , all exce...
-267     under the term of the mortgage loan documents ...
-Name: SentenceLemmas, Length: 1353, dtype: object, 'X_test': 1835    “ priority payment cessation event ” mean ( a ...
-609     the borrower be require to deposit into an eli...
-747     the borrower have establish and be require to ...
-1280    from such fund , brand manager be require to p...
-1377    during a trigger period , fund in the deposit ...
-                              ...                        
-1773    “ cash sweep event ” mean the occurrence of : ...
-1500    the mortgage lender be not require to disburse...
-761     the lender have receive from the borrower a pl...
-301     on each payment date occur on and after the oc...
-1286    borrower , at borrower ’s own expense , will c...
-Name: SentenceLemmas, Length: 580, dtype: object, 'y_train': 1541    0
-1315    0
-788     0
-687     0
-1839    0
-       ..
-947     0
-692     0
-163     0
-652     0
-267     0
-Name: mezzanine_outstanding, Length: 1353, dtype: int64, 'y_test': 1835    0
-609     0
-747     0
-1280    0
-1377    0
-       ..
-1773    0
-1500    0
-761     0
-301     0
-1286    0
-Name: mezzanine_outstanding, Length: 580, dtype: int64, 'indices_train': Int64Index([1541, 1315,  788,  687, 1839,  470, 1065, 1620, 1170, 1243,
-            ...
-            1110, 1703, 1374, 1042,  880,  947,  692,  163,  652,  267],
-           dtype='int64', length=1353), 'indices_test': Int64Index([1835,  609,  747, 1280, 1377,   39,  919,  362,  360, 1007,
-            ...
-            1607, 1067,  643, 1101,  487, 1773, 1500,  761,  301, 1286],
-           dtype='int64', length=580)}","GridSearchCV(cv=3, error_score=nan,
-             estimator=Pipeline(memory=None,
-                                steps=[('cvec',
-                                        CountVectorizer(analyzer='word',
-                                                        binary=False,
-                                                        decode_error='strict',
-                                                        dtype=<class 'numpy.int64'>,
-                                                        encoding='utf-8',
-                                                        input='content',
-                                                        lowercase=True,
-                                                        max_df=1.0,
-                                                        max_features=None,
-                                                        min_df=1,
-                                                        ngram_range=(1, 1),
-                                                        preprocessor=None,
-                                                        stop_words=None,
-                                                        strip_accents=None,
-                                                        token_pattern='(?u)...
-                                               'be', 'for', 'with', 'that',
-                                               'marriott'],
-                                              ['our', 'she', 'their', 'within',
-                                               'however', 'anywhere', 'further',
-                                               'may', 'also', 'up', 'besides',
-                                               'every', 'last', 'name',
-                                               'should', 'for', 'around',
-                                               'part', 'thence', 'almost',
-                                               'full', 'to', 'were', 'himself',
-                                               'would', 'how', 'your',
-                                               'everyone', 'during', 'have', ...]]},
-             pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
-             scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 400, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 3), 'cvec__stop_words': ['the', 'and', 'a', 'to', 'it', 'be', 'for', 'with', 'that', 'marriott']}",8,2,0.4444444444444444,0.9090909090909091,0.0
-13,aggregate_dscr_fall,lr,f1,SentenceLemmas,"{'X_train': 1849    the mortgage loan documents require the borrow...
-530     additionally , if , at any time during a trigg...
-249     during a trigger period , all excess cash afte...
-313     the lender will be require to disburse to the ...
-620     during a trigger period , so long as no mortga...
-                              ...                        
-1413    “ ground rent ” mean any base rent , additiona...
-226     “ cash sweep period ” mean each period ( a ) t...
-1067    the borrower have establish and be require to ...
-544     during a trigger period , fund in the deposit ...
-1191    the borrower will not alter or modify the cash...
-Name: SentenceLemmas, Length: 1353, dtype: object, 'X_test': 1832    “ debt yield trigger event cure ” mean ( i ) t...
-603     during the continuance of a mortgage loan even...
-741     with respect to each receipt from the property...
-1274    notwithstanding anything to the contrary in th...
-1371    “ condominium board of managers ” mean the boa...
-                              ...                        
-1792    during a cash sweep period , all fund in the e...
-1497    amount so deposit be refer to as the “ replace...
-755     if each rating agency have , in the lender ’s ...
-294     the lender be require to disburse to the borro...
-1280    from such fund , brand manager be require to p...
-Name: SentenceLemmas, Length: 580, dtype: object, 'y_train': 1849    0
-530     0
-249     0
-313     0
-620     0
-       ..
-1413    0
-226     0
-1067    0
-544     0
-1191    0
-Name: aggregate_dscr_fall, Length: 1353, dtype: int64, 'y_test': 1832    0
-603     0
-741     0
-1274    0
-1371    0
-       ..
-1792    0
-1497    0
-755     0
-294     0
-1280    0
-Name: aggregate_dscr_fall, Length: 580, dtype: int64, 'indices_train': Int64Index([1849,  530,  249,  313,  620, 1278,  163,  984, 1250,  709,
-            ...
-              82,  538, 1642,  815, 1670, 1413,  226, 1067,  544, 1191],
-           dtype='int64', length=1353), 'indices_test': Int64Index([1832,  603,  741, 1274, 1371,   40,  913,  355,  353, 1001,
-            ...
-            1604, 1061, 1565, 1095,  481, 1792, 1497,  755,  294, 1280],
-           dtype='int64', length=580)}","GridSearchCV(cv=3, error_score=nan,
-             estimator=Pipeline(memory=None,
-                                steps=[('cvec',
-                                        CountVectorizer(analyzer='word',
-                                                        binary=False,
-                                                        decode_error='strict',
-                                                        dtype=<class 'numpy.int64'>,
-                                                        encoding='utf-8',
-                                                        input='content',
-                                                        lowercase=True,
-                                                        max_df=1.0,
-                                                        max_features=None,
-                                                        min_df=1,
-                                                        ngram_range=(1, 1),
-                                                        preprocessor=None,
-                                                        stop_words=None,
-                                                        strip_accents=None,
-                                                        token_pattern='(?u)...
-                                               'be', 'for', 'with', 'that',
-                                               'marriott'],
-                                              ['our', 'she', 'their', 'within',
-                                               'however', 'anywhere', 'further',
-                                               'may', 'also', 'up', 'besides',
-                                               'every', 'last', 'name',
-                                               'should', 'for', 'around',
-                                               'part', 'thence', 'almost',
-                                               'full', 'to', 'were', 'himself',
-                                               'would', 'how', 'your',
-                                               'everyone', 'during', 'have', ...]]},
-             pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
-             scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 400, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 2), 'cvec__stop_words': ['the', 'to', 'of', 'be', 'and', 'in', 'a', 'marriott']}",5,2,0.6666666666666666,1.0,0.0
-14,sff,lr,f1,SentenceLemmas,"{'X_train': 1645    an eligible account will not be evidence by a ...
+12,sff,lr,f1,SentenceLemmas,"{'X_train': 1645    an eligible account will not be evidence by a ...
 425     upon the cure of any trigger period ( and prov...
 780     base on the assume annual debt service on the ...
 679     during a cash sweep period cause solely by a c...
@@ -1203,14 +1047,179 @@ Name: sff, Length: 580, dtype: int64, 'indices_train': Int64Index([1645,  425,  
                                                         token_pattern='(?u)...
                                                'be', 'for', 'with', 'that',
                                                'marriott'],
-                                              ['our', 'she', 'their', 'within',
-                                               'however', 'anywhere', 'further',
-                                               'may', 'also', 'up', 'besides',
-                                               'every', 'last', 'name',
-                                               'should', 'for', 'around',
-                                               'part', 'thence', 'almost',
-                                               'full', 'to', 'were', 'himself',
-                                               'would', 'how', 'your',
-                                               'everyone', 'during', 'have', ...]]},
+                                              ['became', 'full', 'unless',
+                                               'with', 'last', 'hers', 'is',
+                                               'hereafter', 'she', 'still',
+                                               'besides', 'during', 'give',
+                                               'all', 'whose', 'latter',
+                                               'itself', 'am', 'beyond',
+                                               'please', 'seemed', 'mostly',
+                                               'here', 'sometime', 'those',
+                                               'already', 'just', 'this',
+                                               'side', 'before', ...]]},
              pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
              scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 200, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 2), 'cvec__stop_words': ['the', 'and', 'a', 'to', 'it', 'be', 'for', 'with', 'that', 'marriott']}",9,3,0.4444444444444444,1.0,0.8
+13,mezzanine_outstanding,lr,f1,SentenceLemmas,"{'X_train': 1541    “ approve leasing costs ” mean actual out - of...
+1315    if at any time the mortgage lender determine t...
+788     as of the cut - off date , the cash management...
+687     during the continuance of a cash management pe...
+1839    the mortgage lender will not be obligate to di...
+                              ...                        
+947     -PRON- can not assure -PRON- that circumstance...
+692     if a cash sweep period be continue , ( a ) if ...
+163     in addition , during the continuance of a mort...
+652     in the event of a cash sweep period , all exce...
+267     under the term of the mortgage loan documents ...
+Name: SentenceLemmas, Length: 1353, dtype: object, 'X_test': 1835    “ priority payment cessation event ” mean ( a ...
+609     the borrower be require to deposit into an eli...
+747     the borrower have establish and be require to ...
+1280    from such fund , brand manager be require to p...
+1377    during a trigger period , fund in the deposit ...
+                              ...                        
+1773    “ cash sweep event ” mean the occurrence of : ...
+1500    the mortgage lender be not require to disburse...
+761     the lender have receive from the borrower a pl...
+301     on each payment date occur on and after the oc...
+1286    borrower , at borrower ’s own expense , will c...
+Name: SentenceLemmas, Length: 580, dtype: object, 'y_train': 1541    0
+1315    0
+788     0
+687     0
+1839    0
+       ..
+947     0
+692     0
+163     0
+652     0
+267     0
+Name: mezzanine_outstanding, Length: 1353, dtype: int64, 'y_test': 1835    0
+609     0
+747     0
+1280    0
+1377    0
+       ..
+1773    0
+1500    0
+761     0
+301     0
+1286    0
+Name: mezzanine_outstanding, Length: 580, dtype: int64, 'indices_train': Int64Index([1541, 1315,  788,  687, 1839,  470, 1065, 1620, 1170, 1243,
+            ...
+            1110, 1703, 1374, 1042,  880,  947,  692,  163,  652,  267],
+           dtype='int64', length=1353), 'indices_test': Int64Index([1835,  609,  747, 1280, 1377,   39,  919,  362,  360, 1007,
+            ...
+            1607, 1067,  643, 1101,  487, 1773, 1500,  761,  301, 1286],
+           dtype='int64', length=580)}","GridSearchCV(cv=3, error_score=nan,
+             estimator=Pipeline(memory=None,
+                                steps=[('cvec',
+                                        CountVectorizer(analyzer='word',
+                                                        binary=False,
+                                                        decode_error='strict',
+                                                        dtype=<class 'numpy.int64'>,
+                                                        encoding='utf-8',
+                                                        input='content',
+                                                        lowercase=True,
+                                                        max_df=1.0,
+                                                        max_features=None,
+                                                        min_df=1,
+                                                        ngram_range=(1, 1),
+                                                        preprocessor=None,
+                                                        stop_words=None,
+                                                        strip_accents=None,
+                                                        token_pattern='(?u)...
+                                               'be', 'for', 'with', 'that',
+                                               'marriott'],
+                                              ['became', 'full', 'unless',
+                                               'with', 'last', 'hers', 'is',
+                                               'hereafter', 'she', 'still',
+                                               'besides', 'during', 'give',
+                                               'all', 'whose', 'latter',
+                                               'itself', 'am', 'beyond',
+                                               'please', 'seemed', 'mostly',
+                                               'here', 'sometime', 'those',
+                                               'already', 'just', 'this',
+                                               'side', 'before', ...]]},
+             pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
+             scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 400, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 3), 'cvec__stop_words': ['the', 'and', 'a', 'to', 'it', 'be', 'for', 'with', 'that', 'marriott']}",8,2,0.4444444444444444,0.9090909090909091,0.0
+14,aggregate_dscr_fall,lr,f1,SentenceLemmas,"{'X_train': 1849    the mortgage loan documents require the borrow...
+530     additionally , if , at any time during a trigg...
+249     during a trigger period , all excess cash afte...
+313     the lender will be require to disburse to the ...
+620     during a trigger period , so long as no mortga...
+                              ...                        
+1413    “ ground rent ” mean any base rent , additiona...
+226     “ cash sweep period ” mean each period ( a ) t...
+1067    the borrower have establish and be require to ...
+544     during a trigger period , fund in the deposit ...
+1191    the borrower will not alter or modify the cash...
+Name: SentenceLemmas, Length: 1353, dtype: object, 'X_test': 1832    “ debt yield trigger event cure ” mean ( i ) t...
+603     during the continuance of a mortgage loan even...
+741     with respect to each receipt from the property...
+1274    notwithstanding anything to the contrary in th...
+1371    “ condominium board of managers ” mean the boa...
+                              ...                        
+1792    during a cash sweep period , all fund in the e...
+1497    amount so deposit be refer to as the “ replace...
+755     if each rating agency have , in the lender ’s ...
+294     the lender be require to disburse to the borro...
+1280    from such fund , brand manager be require to p...
+Name: SentenceLemmas, Length: 580, dtype: object, 'y_train': 1849    0
+530     0
+249     0
+313     0
+620     0
+       ..
+1413    0
+226     0
+1067    0
+544     0
+1191    0
+Name: aggregate_dscr_fall, Length: 1353, dtype: int64, 'y_test': 1832    0
+603     0
+741     0
+1274    0
+1371    0
+       ..
+1792    0
+1497    0
+755     0
+294     0
+1280    0
+Name: aggregate_dscr_fall, Length: 580, dtype: int64, 'indices_train': Int64Index([1849,  530,  249,  313,  620, 1278,  163,  984, 1250,  709,
+            ...
+              82,  538, 1642,  815, 1670, 1413,  226, 1067,  544, 1191],
+           dtype='int64', length=1353), 'indices_test': Int64Index([1832,  603,  741, 1274, 1371,   40,  913,  355,  353, 1001,
+            ...
+            1604, 1061, 1565, 1095,  481, 1792, 1497,  755,  294, 1280],
+           dtype='int64', length=580)}","GridSearchCV(cv=3, error_score=nan,
+             estimator=Pipeline(memory=None,
+                                steps=[('cvec',
+                                        CountVectorizer(analyzer='word',
+                                                        binary=False,
+                                                        decode_error='strict',
+                                                        dtype=<class 'numpy.int64'>,
+                                                        encoding='utf-8',
+                                                        input='content',
+                                                        lowercase=True,
+                                                        max_df=1.0,
+                                                        max_features=None,
+                                                        min_df=1,
+                                                        ngram_range=(1, 1),
+                                                        preprocessor=None,
+                                                        stop_words=None,
+                                                        strip_accents=None,
+                                                        token_pattern='(?u)...
+                                               'be', 'for', 'with', 'that',
+                                               'marriott'],
+                                              ['became', 'full', 'unless',
+                                               'with', 'last', 'hers', 'is',
+                                               'hereafter', 'she', 'still',
+                                               'besides', 'during', 'give',
+                                               'all', 'whose', 'latter',
+                                               'itself', 'am', 'beyond',
+                                               'please', 'seemed', 'mostly',
+                                               'here', 'sometime', 'those',
+                                               'already', 'just', 'this',
+                                               'side', 'before', ...]]},
+             pre_dispatch='2*n_jobs', refit=True, return_train_score=False,
+             scoring='f1', verbose=0)","{'cvec__max_df': 0.99, 'cvec__max_features': 400, 'cvec__min_df': 2, 'cvec__ngram_range': (1, 2), 'cvec__stop_words': ['the', 'to', 'of', 'be', 'and', 'in', 'a', 'marriott']}",5,2,0.6666666666666666,1.0,0.0

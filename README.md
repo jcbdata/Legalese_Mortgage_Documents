@@ -1,7 +1,8 @@
 
 ---
 
-# Deconstructing Legalese: understanding the complex language of legal agreements
+# Deconstructing Legalese: 
+## Understanding the complex language of legal agreements
 
 
 ## Introduction & Problem Statement:

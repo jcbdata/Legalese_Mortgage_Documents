@@ -1,9 +1,0 @@
-index,prediction,actual,loan_default,aggregate_dscr_fall,dscr_fall,unspecified,debt_yield_fall,aggregate_debt_yield_fall,mezzanine_default,tenant_failure,mezzanine_outstanding,operator_termination,bankruptcy,sponsor_termination,renovations,nontrigger
-641,0.0,1.0,1,0,0,0,1,0,1,1,0,0,0,0,0,0
-631,0.0,1.0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-351,0.0,1.0,1,0,0,0,1,1,1,0,0,0,0,0,0,0
-250,0.0,1.0,1,0,0,0,1,1,0,0,0,0,0,0,0,0
-404,0.0,1.0,1,0,0,0,0,0,0,1,0,0,0,0,0,0
-1,0.0,1.0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
-577,0.0,1.0,1,0,0,0,0,0,0,0,0,0,0,1,0,0
-sum,0.0,7.0,7,1,0,0,3,2,2,2,0,0,0,1,0,0

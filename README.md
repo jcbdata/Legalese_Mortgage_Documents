@@ -35,7 +35,12 @@ Some of the key characteristics of the data set are: structured text patterns, v
 
 Due to the fact that individual sentences could contain more than one trigger type, it is important to note that a multiclass classification approach would not be appropriate. The implemented approach is instead to create a series of binary classification models, where each model predicts whether a given sentence contains a specific trigger type.
 
-The relatively small data size and class balance differences created challenges. Some triggers were represented only a few times within the data set, and the standard logistic regression model did not perform well in these cases due to poor representation of the trigger types within the data set. To address this issue, a secondary classification approach was developed, where the aim was to predict whether a sentence contained a Trigger clause (i.e.,  Trigger Sentence vs. Nontrigger Sentence). For this approach, a custom Training set was created, containing balanced classes of the larged trigger categories. The Test set contained the small classes that had not been exposed to the training set. This approach was successful, and was able to identify 90% of the sentence containing trigger types that were not contained in the training set.
+The relatively small data size as well as class balance differences created challenges in predicting the less frequent class labels. Some triggers were represented only a few times (e.g., 3-5 times) within the data set as a whole, and the standard logistic regression model did not perform well in these cases. To address this issue, a secondary classification approach was developed, where the aim was to predict whether a sentence contained a Trigger clause (i.e.,  Trigger Sentence vs. Nontrigger Sentence). For this approach, a custom Training set was created, containing balanced classes of the larged trigger categories. The Test set contained the small classes that had not been exposed to the training set. This approach was successful, and was able to identify 90% of the sentence containing 'new' trigger types that had not been present in the training set.
 
 Furthermore, in this project, an emphasis was placed on review of any miscategorized sentences as well as the features that lead to prediction of each trigger type. 
+
+## Libraries utilized
+
+The code uses the following external libraries: Pandas, Matplotlib, Numpy, Seaborn, Scikit-Learn, Spacy, Time, Pickle
+The dataset itself is proprietary and will not be fully hosted on Github.
 

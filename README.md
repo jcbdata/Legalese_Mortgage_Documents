@@ -15,7 +15,7 @@ In this project, a Natural Language model is developed to interpret the intent o
 
 ## Data Set
 
-The underlying dataset consists of both trigger-related and nontrigger sentences that have been hand labeled by a linguist. The dataset represents 36 SASB documents, with sentences ranging from 5 to 1300+ words. 15 distinct trigger categories are contained within the dataset, and each sentence can contain more than one trigger category.
+The underlying dataset consists of both trigger-related and nontrigger sentences that have been hand labeled by a linguist. The dataset represents 36 SASB documents, with individual sentences that range from 5 to 1300+ words. 15 distinct trigger categories are contained within the dataset, and sentences can contain more than one Cash Trap trigger type.
 
 As received, the raw data set had the following structure:
 
@@ -25,22 +25,24 @@ As received, the raw data set had the following structure:
 | Doc_1    | The Borrower has established... | Aggregate DSCR Fall | 1          |
 | Doc_1    | "Trigger Period" means any...   | DSCR Fall           | 0          |
 
-Where the Sentence is the original text extracted from the document, the Trigger column is the label assigned by a linguist, and Multiclass represents where a given sentence had more than one label assigned. 
+where the Sentence is the original text extracted from the document, the Trigger column is the label assigned by a linguist, and Multiclass represents where a given sentence had more than one label assigned. 
+
+The dataset itself is proprietary and will not be fully hosted on Github.
 
 ---
 
 ## Executive Summary
 
-Some of the key characteristics of the data set are: structured text patterns, varied sentence lengths and nonstandard language. Several models were evaluated (including Logistic Regression, Random Forest and BERT, a pretrained neural network). Logistic Regression was selected as our final model, for several reasons. The logistic regression model was quite successful in predicting the most frequent trigger categories (0.950+ ROC AUC) , while also being simple to implement, fast/inexpensive to run, and providing intuitive features (words and phrases contained in the sentences). 
+Some of the key characteristics of the data set are: structured text patterns, varied sentence lengths and nonstandard language. Several models were evaluated (including Logistic Regression, Random Forest and BERT, a pretrained neural network). The logistic regression model was quite successful in predicting the most frequent trigger categories (0.950+ ROC AUC) , while also being simple to implement, fast/inexpensive to run, and providing intuitive features (words and phrases contained in the sentences). 
 
 Due to the fact that individual sentences could contain more than one trigger type, it is important to note that a multiclass classification approach would not be appropriate. The implemented approach is instead to create a series of binary classification models, where each model predicts whether a given sentence contains a specific trigger type.
 
-The relatively small data size as well as class balance differences created challenges in predicting the less frequent class labels. Some triggers were represented only a few times (e.g., 3-5 times) within the data set as a whole, and the standard logistic regression model did not perform well in these cases. To address this issue, a secondary classification approach was developed, where the aim was to predict whether a sentence contained a Trigger clause (i.e.,  Trigger Sentence vs. Nontrigger Sentence). For this approach, a custom Training set was created, containing balanced classes of the larged trigger categories. The Test set contained the small classes that had not been exposed to the training set. This approach was successful, and was able to identify 91% of the sentences containing 'new' trigger types that had not been present in the training set.
+The relatively small data size as well as class balance differences created challenges in predicting the less frequent class labels. Some triggers were represented only a few times (e.g., 3-5 times) within the data set as a whole, and the standard logistic regression model did not perform well in these cases. To address this issue, a secondary classification approach was developed, where the aim was to predict whether a sentence contained a Trigger clause (i.e.,  identiy a Trigger Sentence vs. Nontrigger Sentence). For this approach, a custom Training set was created, containing balanced classes of the larger trigger categories. The Test set contained the small classes that had not been exposed to the modeling process. This approach was successful, and was able to identify 91% of the sentences containing 'new' trigger types that had not been present in the training set.
 
 Furthermore, in this project, an emphasis was placed on review of any miscategorized sentences as well as the features that lead to prediction of each trigger type. 
 
 ## Libraries utilized
 
 The code uses the following external libraries: Pandas, Matplotlib, Numpy, Seaborn, Scikit-Learn, Spacy, Time, Pickle
-The dataset itself is proprietary and will not be fully hosted on Github.
+
 

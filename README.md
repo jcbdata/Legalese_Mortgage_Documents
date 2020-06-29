@@ -27,7 +27,7 @@ As received, the raw data set had the following structure:
 
 where the Sentence is the original text extracted from the document, the Trigger column is the label assigned by a linguist, and Multiclass represents where a given sentence had more than one label assigned. 
 
-The dataset itself is proprietary and will not be fully hosted on Github.
+The underlying data is proprietary and will not be hosted on Github.
 
 ---
 
@@ -40,6 +40,14 @@ Due to the fact that individual sentences could contain more than one trigger ty
 The class balance differences created challenges in predicting the less frequent class labels. Some triggers were represented only a few times (e.g., 3-5 times) within the data set as a whole, and the standard logistic regression model did not perform well in these cases. To address this issue, a secondary classification approach was developed, where the aim was to predict whether a sentence contained a Trigger clause (i.e.,  identify a Trigger Sentence vs. Nontrigger Sentence). For this approach, a custom Training set was created, containing balanced classes of the larger trigger categories. The Test set contained the small classes that had not been exposed to the modeling process. This approach was successful, and was able to identify 91% of the sentences containing 'new' trigger types that had not been present in the training set.
 
 Furthermore, in this project, an emphasis was placed on review of any miscategorized sentences as well as the features that lead to prediction of each trigger type. 
+
+## Code Overview
+
+There are four Jupyter notebooks within this repository:
+- Data Cleaning & NLP Pre-processing
+- Modeling of the full data set (predictions of all trigger types)
+- Visualization of the model results (features and confusion matrices)
+- Prediction of trigger sentences, for identification of the less frequent trigger types
 
 ## Libraries utilized
 
